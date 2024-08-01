@@ -99,8 +99,8 @@ const Header = () => {
                   </div>
                 ))}
               </div>
-              <Button variant="demoButton" className="hidden md:block">
-                Request A Demo
+              <Button variant="demoButton" className="hidden md:block text-center uppercase">
+                Request a demo
               </Button>
               <Button
                 variant="link"

@@ -8,6 +8,7 @@ import LogoTicker from "./components/LogoTicker";
 import { WhyChooseUs } from "./components/WhyChooseUs";
 import Testimonials from "./components/Testimonials";
 import FYQ from "./components/FYQ";
+import CallToAction from "./components/CallToAction";
 export default function Home() {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <FYQ />
+      <CallToAction />
     </div>
   );
 }
