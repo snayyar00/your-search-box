@@ -10,7 +10,7 @@ import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 export function WhyChooseUs() {
   return (
     <>
-      <section className="py-12 md:py-24 text-white relative ">
+      <section className="py-12 md:py-24 text-white relative overflow-clip ">
         <div className="container">
           {/* background grid */}
           <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">

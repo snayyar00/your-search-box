@@ -9,6 +9,7 @@ import { WhyChooseUs } from "./components/WhyChooseUs";
 import Testimonials from "./components/Testimonials";
 import FYQ from "./components/FYQ";
 import CallToAction from "./components/CallToAction";
+import Pricing from "./components/Pricing";
 export default function Home() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function Home() {
       <ProductShowCase />
       <Features />
       <WhyChooseUs />
+      <Pricing />
       <Testimonials />
       <FYQ />
       <CallToAction />

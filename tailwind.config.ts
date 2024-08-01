@@ -118,6 +118,14 @@ const config = {
             transform: "translate(calc(100cqw - 100%), 0)",
           },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -126,6 +134,7 @@ const config = {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
+        shimmer: "shimmer 2s linear infinite",
       },
     },
   },

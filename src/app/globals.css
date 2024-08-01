@@ -72,6 +72,15 @@
 }
 
 @layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg tracking-tight font-medium;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply text-black bg-transparent border border-gray-400;
+  }
   .section-top-cover {
     @apply w-[275px] md:w-[540px] mx-auto text-center;
   }
