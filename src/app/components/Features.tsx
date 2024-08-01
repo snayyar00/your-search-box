@@ -32,7 +32,7 @@ const Features = () => {
             comes in.
           </p>
         </div>
-        <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[420px] mt-5 md:mt-8 lg:mt-16 gap-8  ">
+        <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[420px] mt-20 md:mt-28 lg:mt-30 gap-8  ">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
