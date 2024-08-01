@@ -8,7 +8,12 @@ import {
 import Image from "next/image";
 import React from "react";
 
+import RealTImeImg from "@/assets/features-images/realtime.jpeg";
+import PersonalisedImg from "@/assets/features-images/personlized-search.jpeg";
+import NlpImg from "@/assets/features-images/nlp.jpeg";
 import DashboardImage from "@/assets/dashboard-layout.png";
+import GlobeImg from "@/assets/features-images/globe.jpeg";
+// import Globe from "@/components/magicui/globe";
 
 const Features = () => {
   return (
@@ -27,7 +32,7 @@ const Features = () => {
             comes in.
           </p>
         </div>
-        <BentoGrid className="max-w-4xl lg:max-w-5xl mx-auto md:auto-rows-[320px] mt-5 md:mt-8 lg:mt-16 gap-8  ">
+        <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[420px] mt-5 md:mt-8 lg:mt-16 gap-8  ">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
@@ -53,9 +58,10 @@ const items = [
       "Harness the power of AI algorithms to deliver personalized product recommendations based on user behavior, preferences, and past interactions.",
     header: (
       <Image
-        src={DashboardImage}
+        src={PersonalisedImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl "
+        className="flex flex-1  w-auto h-full min-h-[100px] rounded-xl md:object-cover opacity-90
+ "
       />
     ),
     className: "md:col-span-2",
@@ -67,9 +73,9 @@ const items = [
       "Enable your customers to search using natural language queries, allowing them to express their needs in their own words and receive accurate results..",
     header: (
       <Image
-        src={DashboardImage}
+        src={NlpImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl"
+        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl md:object-cover opacity-80"
       />
     ),
     className: "md:col-span-1",
@@ -79,9 +85,9 @@ const items = [
     description: "Dive into the transformative power of technology.",
     header: (
       <Image
-        src={DashboardImage}
+        src={GlobeImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl bg-gradient-to-tl from-violet-300 via-[#14093E] to-[#F2F2]"
+        className="flex flex-1 w-full h-full min-h-[50px] rounded-xl md:object-cover opacity-80"
       />
     ),
     className: "md:col-span-1",
@@ -92,9 +98,9 @@ const items = [
       "Gain valuable insights into customer behavior, popular search queries, and emerging trends to optimize your product offerings and marketing strategies.",
     header: (
       <Image
-        src={DashboardImage}
+        src={RealTImeImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl"
+        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl md:object-cover opacity-90"
       />
     ),
     className: "md:col-span-2",
