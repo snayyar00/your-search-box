@@ -13,11 +13,16 @@ import PersonalisedImg from "@/assets/features-images/personlized-search.jpeg";
 import NlpImg from "@/assets/features-images/nlp.jpeg";
 import DashboardImage from "@/assets/dashboard-layout.png";
 import GlobeImg from "@/assets/features-images/globe.jpeg";
+import { Spotlight } from "@/components/ui/spotlight";
 // import Globe from "@/components/magicui/globe";
 
 const Features = () => {
   return (
-    <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]">
+    <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative">
+      <Spotlight
+        className="top-[-19rem] left-[2rem] opacity-25 md:top-[-12rem] md:left-[18rem] lg:opacity-10"
+        fill="violet"
+      />
       <div className="container">
         <div className="sm:w-[540px] mx-auto lg:w-[600px] ">
           <div className="flex justify-center pb-5">

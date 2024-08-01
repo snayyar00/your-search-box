@@ -5,74 +5,85 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { Button } from "@/components/ui/button";
 
+import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+
 export function WhyChooseUs() {
   return (
     <>
-      <section className="py-12 md:py-24 text-white">
+      <section className="py-12 md:py-24 text-white relative ">
         <div className="container">
-          <div className="sm:w-[33.75rem] mx-auto  flex flex-col items-center ">
-            <div className="flex justify-center pb-5">
-              <div className="tag text-lg border border-white rounded-lg">
-                Why choose us
-              </div>
-            </div>
-            <h2
-              className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text
-  [-webkit-background-clip:text]  lg:w-[55rem] mt-10 lg:leading-tight "
-            >
-              Why Choose Our <span className="hidden lg:block"></span>
-              <span className="block md:hidden"></span>
-              AI-Powered On-Site Search?
-            </h2>
-            <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5">
-              Our AI effortlessly navigates through your website information,
-              providing visitors with instant, accurate results.
-            </p>
+          {/* background grid */}
+          <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
+            <BackgroundGridImage className="w-full h-full opacity-60" />
           </div>
-          <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5">
-            {/* add des prop */}
-            <Card
-              title="Expertise in AI Technology"
-              icon={<AceternityIcon order="Reason 1" />}
-              des="With years of experience in artificial intelligence and machine learning, we're pioneers in delivering innovative search solutions tailored to your business needs"
-            >
-              <CanvasRevealEffect
-                animationSpeed={5.1}
-                // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-                containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
-              />
-            </Card>
-            <Card
-              title="Customizable Solutions"
-              icon={<AceternityIcon order="Reason 2" />}
-              des="We understand that every business is unique. That's why we offer customizable solutions to suit your specific requirements and objectives."
-            >
-              <CanvasRevealEffect
-                animationSpeed={3}
-                // change bg-black to bg-pink-900
-                containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-                colors={[
-                  // change the colors of the
-                  [255, 166, 158],
-                  [221, 255, 247],
-                ]}
-                dotSize={2}
-              />
-              {/* Radial gradient for the cute fade */}
-              {/* remove this one */}
-              {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
-            </Card>
-            <Card
-              title="Proven Results"
-              icon={<AceternityIcon order="Reason 3" />}
-              des="Join the ranks of satisfied clients who have experienced increased conversion rates, higher customer satisfaction, and improved retention with our AI-powered on-site search."
-            >
-              <CanvasRevealEffect
-                animationSpeed={3}
-                containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-                colors={[[125, 211, 252]]}
-              />
-            </Card>
+          <div>
+            <div className="w-full absolute left-[50rem] top-[15rem] min-h-96  ">
+              <BackgroundGridImage className="w-full h-full opacity-60" />
+            </div>
+            <div className="sm:w-[33.75rem] mx-auto  flex flex-col items-center   ">
+              <div className="flex justify-center pb-5">
+                <div className="tag text-lg border border-white rounded-lg">
+                  Why choose us
+                </div>
+              </div>
+              <h2
+                className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text
+  [-webkit-background-clip:text]  lg:w-[55rem] mt-10 lg:leading-tight "
+              >
+                Why Choose Our <span className="hidden lg:block"></span>
+                <span className="block md:hidden"></span>
+                AI-Powered On-Site Search?
+              </h2>
+              <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5">
+                Our AI effortlessly navigates through your website information,
+                providing visitors with instant, accurate results.
+              </p>
+            </div>
+            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5">
+              {/* add des prop */}
+              <Card
+                title="Expertise in AI Technology"
+                icon={<AceternityIcon order="Reason 1" />}
+                des="With years of experience in artificial intelligence and machine learning, we're pioneers in delivering innovative search solutions tailored to your business needs"
+              >
+                <CanvasRevealEffect
+                  animationSpeed={5.1}
+                  // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
+                  containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
+                />
+              </Card>
+              <Card
+                title="Customizable Solutions"
+                icon={<AceternityIcon order="Reason 2" />}
+                des="We understand that every business is unique. That's why we offer customizable solutions to suit your specific requirements and objectives."
+              >
+                <CanvasRevealEffect
+                  animationSpeed={3}
+                  // change bg-black to bg-pink-900
+                  containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
+                  colors={[
+                    // change the colors of the
+                    [255, 166, 158],
+                    [221, 255, 247],
+                  ]}
+                  dotSize={2}
+                />
+                {/* Radial gradient for the cute fade */}
+                {/* remove this one */}
+                {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+              </Card>
+              <Card
+                title="Proven Results"
+                icon={<AceternityIcon order="Reason 3" />}
+                des="Join the ranks of satisfied clients who have experienced increased conversion rates, higher customer satisfaction, and improved retention with our AI-powered on-site search."
+              >
+                <CanvasRevealEffect
+                  animationSpeed={3}
+                  containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
+                  colors={[[125, 211, 252]]}
+                />
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -93,7 +104,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
         />
         <span
           className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
+        justify-center rounded-full bg-violet-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
         >
           {order}
         </span>
