@@ -6,6 +6,8 @@ import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/moving-border";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const pricingTiers = [
   {
@@ -62,8 +64,10 @@ const pricingTiers = [
 
 const Pricing = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 relative">
       <div className="container">
+        <ShootingStars />
+        <StarsBackground className="opacity-70 z-1" />
         <div className="flex flex-col">
           <h1
             className="section-header pt-5  from-white to-[#586285] text-transparent bg-clip-text
