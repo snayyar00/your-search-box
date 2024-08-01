@@ -49,7 +49,7 @@ const LogoTicker = () => {
           Trusted by the world&apos;s most innovative teams
         </h2>
         <div
-          className="flex overflow-hidden mt-12
+          className="flex overflow-hidden mt-12 lg:mt-16
         [mask-image:linear-gradient(to_right,transparent,black,transparent)]
         [-webkit-mask-image:linear-gradient(to_right,transparent,black,transparent)]
         "

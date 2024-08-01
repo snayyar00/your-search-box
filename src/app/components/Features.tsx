@@ -19,14 +19,14 @@ const Features = () => {
   return (
     <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]">
       <div className="container">
-        <div className="sm:w-[540px] mx-auto ">
+        <div className="sm:w-[540px] mx-auto lg:w-[600px] ">
           <div className="flex justify-center pb-5">
             <div className="tag border border-white/50">Our Features</div>
           </div>
-          <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]  ">
+          <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
             A effective solution for better search
           </h2>
-          <p className="text-xl leading-relaxed pt-5 text-center">
+          <p className="text-xl leading-relaxed pt-5 text-center max-w-[550px]">
             Traditional search engines often fall short, leading to frustration
             and lost opportunities. That&apos;s where AI-powered on-site search
             comes in.

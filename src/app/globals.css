@@ -76,7 +76,7 @@
     @apply w-[275px] md:w-[540px] mx-auto text-center;
   }
   .section-header {
-    @apply text-center font-bold text-[32px] md:text-5xl md:leading-[60px] tracking-tight leading-tight  bg-gradient-to-b from-black to-[#001354] text-transparent bg-clip-text
+    @apply text-center font-bold text-[32px] md:text-5xl lg:text-7xl md:leading-[60px] tracking-tight leading-tight  bg-gradient-to-b from-black to-[#001354] text-transparent bg-clip-text
   [-webkit-background-clip:text];
   }
   .section-paragraph {
@@ -84,5 +84,9 @@
   }
   .tag {
     @apply inline-flex border border-[#222]/10 w-fit py-1 px-3 rounded-xl text-sm tracking-tight;
+  }
+
+  .card {
+    @apply p-10 border border-[#222222]/15 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full;
   }
 }

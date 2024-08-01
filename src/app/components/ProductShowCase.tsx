@@ -35,14 +35,14 @@ const ProductShowCase = () => {
       className="py-28 overflow-x-clip bg-gradient-to-b from-[#F2F2F2] to-[#14093E] "
     >
       <div className="container">
-        <div className="sm:w-[33.75rem] mx-auto ">
+        <div className="sm:w-[33.75rem] mx-auto lg:w-[45rem]  lg:leading-tight">
           <div className="flex justify-center pb-5">
             <div className="tag">Boost your productivity</div>
           </div>
           <h2 className="section-header">
             A more effective way to track user data
           </h2>
-          <p className="text-xl leading-relaxed pt-5 text-center">
+          <p className="text-xl leading-relaxed pt-5 text-center lg:w-[35rem] mx-auto">
             Effortlessly get your users questions & queries data into a fully
             functional, easily accessible, metrics information into the website
             dashboard in just minutes

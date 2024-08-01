@@ -5,7 +5,9 @@ import Hero from "./components/Hero";
 import ProductShowCase from "./components/ProductShowCase";
 import Features from "./components/Features";
 import LogoTicker from "./components/LogoTicker";
-
+import { WhyChooseUs } from "./components/WhyChooseUs";
+import Testimonials from "./components/Testimonials";
+import FYQ from "./components/FYQ";
 export default function Home() {
   return (
     <div>
@@ -14,6 +16,9 @@ export default function Home() {
       <LogoTicker />
       <ProductShowCase />
       <Features />
+      <WhyChooseUs />
+      <Testimonials />
+      <FYQ />
     </div>
   );
 }
