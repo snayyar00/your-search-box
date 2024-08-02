@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import FYQ from "./components/FYQ";
 import CallToAction from "./components/CallToAction";
 import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function Home() {
       <Testimonials />
       <FYQ />
       <CallToAction />
+      <Footer />
     </div>
   );
 }

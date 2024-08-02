@@ -8,6 +8,7 @@ import { CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/moving-border";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import Link from "next/link";
 
 const pricingTiers = [
   {
@@ -64,11 +65,11 @@ const pricingTiers = [
 
 const Pricing = () => {
   return (
-    <section className="py-24 relative">
-      <div className="container">
-        <ShootingStars />
+    <div className="py-24 relative" id="pricing">
+      <ShootingStars />
+      <div className="container relative">
         <StarsBackground className="opacity-70 z-1" />
-        <div className="flex flex-col">
+        <div className="flex flex-col relative">
           <h1
             className="section-header pt-5  from-white to-[#586285] text-transparent bg-clip-text
   [-webkit-background-clip:text] py-5 lg:text-7xl lg:tracking-wide"
@@ -107,9 +108,11 @@ const Pricing = () => {
                       {title}
                     </h3>
                     {popular && (
-                      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                        Most Popular
-                      </button>
+                      <Link href="/sign-up">
+                        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                          Most Popular
+                        </button>
+                      </Link>
                     )}
                   </div>
                   <p className="flex gap-1 items-baseline mt-[30px]  ">
@@ -125,14 +128,16 @@ const Pricing = () => {
                       /monthly
                     </span>
                   </p>
-                  <button
-                    className={twMerge(
-                      "btn btn-primary w-full my-[30px]",
-                      inverse && "bg-white text-black"
-                    )}
-                  >
-                    {buttonText}
-                  </button>
+                  <Link href="/sign-up">
+                    <button
+                      className={twMerge(
+                        "btn btn-primary w-full my-[30px] hover:translate-x-1 -hover:translate-y-1 hover:duration-300",
+                        inverse && "bg-white text-black"
+                      )}
+                    >
+                      {buttonText}
+                    </button>
+                  </Link>
                   <ul className="flex flex-col gap-5 ">
                     {features.map((feature) => (
                       <li
@@ -152,7 +157,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

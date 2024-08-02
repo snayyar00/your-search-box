@@ -42,14 +42,14 @@ const LogoTicker = () => {
   return (
     <div
       className="py-8 md:py-12 mt-10 bg-gradient-to-b from-[#F5F5F5] to-[#F5F5F5]"
-      text-black
+      id="partners"
     >
       <div className="container">
         <h2 className="text-xl text-center text-black">
           Trusted by the world&apos;s most innovative teams
         </h2>
         <div
-          className="flex overflow-hidden mt-12 lg:mt-16
+          className="flex overflow-hidden mt-12 lg:mt-20
         [mask-image:linear-gradient(to_right,transparent,black,transparent)]
         [-webkit-mask-image:linear-gradient(to_right,transparent,black,transparent)]
         "

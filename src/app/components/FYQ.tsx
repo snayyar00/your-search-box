@@ -93,7 +93,7 @@ export const AccordionItem = ({ id, question, answer }: accordionProps) => {
 
 const FYQ = () => {
   return (
-    <div className=" text-white py-[72px] sm:py-24 bg-gradient-to-b from-[#14093E] to-[#f2f2]">
+    <div className=" text-white py-[72px] sm:py-24 bg-gradient-to-b from-[#14093E] to-[#f2f2]" id='fyq'>
       <div className="container ">
         <h2
           className="font-bold text-5xl sm:text-6xl sm:max-w-2xl mx-auto text-center tracking-tight bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text leading-tight

@@ -18,7 +18,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 const Features = () => {
   return (
-    <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative">
+    <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative" id="features">
       <Spotlight
         className="top-[-19rem] left-[2rem] opacity-25 md:top-[-12rem] md:left-[18rem] lg:opacity-10"
         fill="violet"

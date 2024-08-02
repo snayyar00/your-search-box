@@ -126,7 +126,7 @@ const TestimonialsColumn = (props: {
 
 const Testimonials = () => {
   return (
-    <section className=" py-16 lg:py-24 text-white/90">
+    <section className=" py-16 lg:py-24 text-white/90" id="testimonials">
       <div className="container">
         <div className="flex justify-center">
           <div className="tag text-lg border border-gray-200  rounded-lg">
