@@ -8,6 +8,8 @@ import { ChevronRight } from "lucide-react";
 import React, { useRef } from "react";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { Spotlight } from "@/components/ui/spotlight";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 import SparklesText from "@/components/magicui/sparkles-text";
 import CircularLogo from "@/assets/circular-logo.svg";
 // import { SearchBoxImage } from "@/assets/search-box.png";
@@ -443,7 +445,7 @@ const Hero = () => {
         ref={sectionRef}
       >
         <motion.div
-          className="absolute h-[70rem] w-[70rem] -translate-x-1/2 left-1/2 -top-[1rem] -z-10 opacity-90"
+          className="absolute h-[70rem] w-[73rem] -translate-x-1/2 left-1/2 -top-[1rem] -z-10 opacity-90"
           style={{
             translateX: "-50%",
             left: "50%",
@@ -470,16 +472,18 @@ const Hero = () => {
             </AnimatedGradientText>
           </div>
           <div className="text-center mt-5 lg:mt-8">
-            <h1 className="text-center  mx-auto bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]  bg-clip-text text-4xl tracking-tighter  sm:text-5xl text-transparent md:text-6xl lg:text-7xl [-webkit-background-clip:text]">
-              Unlock the power of{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-200 from-zinc-300 [-webkit-background-clip:text] leading-tight">
-                AI with our
-              </span>{" "}
-              <SparklesText
-                text="On-Site Search"
-                className="font-semibold tracking-normal text-blue-400 inline-flex"
+            <div className="text-center  mx-auto bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]  bg-clip-text text-4xl tracking-tighter  sm:text-5xl text-transparent md:text-6xl lg:text-7xl [-webkit-background-clip:text]">
+              <TextGenerateEffect
+                words=" Unlock the power of AI with our"
+                className="text-white"
               />
-            </h1>
+              <div className="opacity-0 animate-[fadeIn_1s_ease-in_5.2s_forwards]">
+                <SparklesText
+                  text="On-Site Search"
+                  className="font-semibold tracking-normal text-blue-400 inline-flex "
+                />
+              </div>
+            </div>
           </div>
           {/* <div className="mt-5 font-semibold tracking-wide md:text-xl text-white/90 md:mt-8 lg:mt-12"> */}
           <div className="text-lg text-center text-soft-foreground-text mt-5 tracking-wide text-white/80">

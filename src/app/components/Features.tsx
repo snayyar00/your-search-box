@@ -34,7 +34,7 @@ const Features = () => {
           <div className="flex justify-center pb-5">
             <div className="tag border border-white/50">Our Features</div>
           </div>
-          
+
           <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
             A effective solution for better search
           </h2>
