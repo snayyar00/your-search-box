@@ -40,7 +40,7 @@ const ProductShowCase = () => {
           <div className="flex justify-center pb-5">
             <div className="tag">Boost your productivity</div>
           </div>
-          <BlurFade delay={0} inView duration={0.5}>
+          <BlurFade delay={0.25} inView inViewMargin="-50px">
             <h2 className="section-header">
               A more effective way to track user data
             </h2>
