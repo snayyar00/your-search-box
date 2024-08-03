@@ -11,6 +11,8 @@ import FYQ from "./components/FYQ";
 import CallToAction from "./components/CallToAction";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+
 export default function Home() {
   return (
     <div>
@@ -18,12 +20,14 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <ProductShowCase />
-      <Features />
-      <WhyChooseUs />
-      <Pricing />
-      <Testimonials />
-      <FYQ />
-      <CallToAction />
+      <TracingBeam>
+        <Features />
+        <WhyChooseUs />
+        <Pricing />
+        <Testimonials />
+        <FYQ />
+        <CallToAction />
+      </TracingBeam>
       <Footer />
     </div>
   );

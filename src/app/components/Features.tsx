@@ -1,4 +1,7 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -18,7 +21,10 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 const Features = () => {
   return (
-    <section className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative" id="features">
+    <section
+      className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative"
+      id="features"
+    >
       <Spotlight
         className="top-[-19rem] left-[2rem] opacity-25 md:top-[-12rem] md:left-[18rem] lg:opacity-10"
         fill="violet"
@@ -28,6 +34,7 @@ const Features = () => {
           <div className="flex justify-center pb-5">
             <div className="tag border border-white/50">Our Features</div>
           </div>
+          
           <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
             A effective solution for better search
           </h2>

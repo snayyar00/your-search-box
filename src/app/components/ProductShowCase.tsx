@@ -7,6 +7,7 @@ import TubeIcon from "@/assets/tube.png";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import ShineBorder from "@/components/magicui/shine-border";
+import BlurFade from "@/components/magicui/blur-fade";
 
 const theme = "white";
 
@@ -39,9 +40,11 @@ const ProductShowCase = () => {
           <div className="flex justify-center pb-5">
             <div className="tag">Boost your productivity</div>
           </div>
-          <h2 className="section-header">
-            A more effective way to track user data
-          </h2>
+          <BlurFade delay={0} inView duration={0.5}>
+            <h2 className="section-header">
+              A more effective way to track user data
+            </h2>
+          </BlurFade>
           <p className="text-xl leading-relaxed pt-5 text-center lg:w-[35rem] mx-auto">
             Effortlessly get your users questions & queries data into a fully
             functional, easily accessible, metrics information into the website
