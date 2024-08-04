@@ -1,10 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedHeader = ({ children, className }) => {
+type AnimatedHeaderProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+const AnimatedHeader = ({ children, className }: AnimatedHeaderProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,

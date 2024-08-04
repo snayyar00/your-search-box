@@ -1,10 +1,18 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedCardContainer = ({ children, index }) => {
+type AnimatedCardContainerProps = {
+  children: ReactNode;
+  index: number;
+};
+
+const AnimatedCardContainer = ({
+  children,
+  index,
+}: AnimatedCardContainerProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
