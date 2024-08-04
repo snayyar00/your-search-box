@@ -17,6 +17,9 @@ import NlpImg from "@/assets/features-images/nlp.jpeg";
 import DashboardImage from "@/assets/dashboard-layout.png";
 import GlobeImg from "@/assets/features-images/globe.jpeg";
 import { Spotlight } from "@/components/ui/spotlight";
+import { div } from "three/webgpu";
+import { cn } from "@/lib/utils";
+import AnimatedHeader from "./AnimatedHeader";
 // import Globe from "@/components/magicui/globe";
 
 const Features = () => {
@@ -26,41 +29,46 @@ const Features = () => {
       id="features"
     >
       <Spotlight
-        className="top-[-19rem] left-[2rem] opacity-25 md:top-[-12rem] md:left-[18rem] lg:opacity-10"
+        className="top-[-304px] left-[32px] opacity-25 md:top-[-192px] md:left-[288px] lg:opacity-10"
         fill="violet"
       />
       <div className="container">
-        <div className="sm:w-[540px] mx-auto lg:w-[600px] ">
+        <div className="sm:w-[33.75rem] mx-auto lg:w-[37.5rem] ">
           <div className="flex justify-center pb-5">
             <div className="tag border border-white/50">Our Features</div>
           </div>
-
-          <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
-            A effective solution for better search
-          </h2>
-          <p className="text-xl leading-relaxed pt-5 text-center max-w-[550px]">
-            Traditional search engines often fall short, leading to frustration
-            and lost opportunities. That&apos;s where AI-powered on-site search
-            comes in.
-          </p>
+          <AnimatedHeader className={""}>
+            <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
+              A effective solution for better search
+            </h2>
+          </AnimatedHeader>
+          <AnimatedHeader className={""}>
+            <p className="text-xl leading-relaxed pt-5 text-center max-w-[34.375rem]">
+              Traditional search engines often fall short, leading to
+              frustration and lost opportunities. That&apos;s where AI-powered
+              on-site search comes in.
+            </p>
+          </AnimatedHeader>
         </div>
-        <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[420px] mt-20 md:mt-28 lg:mt-30 gap-8  ">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              className={item.className}
-            />
-          ))}
-        </BentoGrid>
+        <AnimatedHeader className={""}>
+          <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[26.25rem] mt-20 md:mt-28 lg:mt-30 gap-8  ">
+            {items.map((item, i) => (
+              <BentoGridItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                className={item.className}
+              />
+            ))}
+          </BentoGrid>
+        </AnimatedHeader>
       </div>
     </section>
   );
 };
 // const Skeleton = () => (
-//   <div className="flex flex-1 w-full h-full min-h-[96px] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-500 dark:bg-black"></div>
+//   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-500 dark:bg-black"></div>
 // );
 
 const items = [
@@ -72,7 +80,7 @@ const items = [
       <Image
         src={PersonalisedImg}
         alt="image"
-        className="flex flex-1  w-auto h-full min-h-[100px] rounded-xl md:object-cover opacity-90
+        className="flex flex-1  w-auto h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-90
  "
       />
     ),
@@ -87,7 +95,7 @@ const items = [
       <Image
         src={NlpImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl md:object-cover opacity-80"
+        className="flex flex-1 w-full h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-80"
       />
     ),
     className: "md:col-span-1",
@@ -99,7 +107,7 @@ const items = [
       <Image
         src={GlobeImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[50px] rounded-xl md:object-cover opacity-80"
+        className="flex flex-1 w-full h-full min-h-[3.125rem] rounded-xl md:object-cover opacity-80"
       />
     ),
     className: "md:col-span-1",
@@ -112,7 +120,7 @@ const items = [
       <Image
         src={RealTImeImg}
         alt="image"
-        className="flex flex-1 w-full h-full min-h-[100px] rounded-xl md:object-cover opacity-90"
+        className="flex flex-1 w-full h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-90"
       />
     ),
     className: "md:col-span-2",

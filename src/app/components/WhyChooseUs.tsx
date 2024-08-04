@@ -6,6 +6,8 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { Button } from "@/components/ui/button";
 
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+import AnimatedHeader from "./AnimatedHeader";
+import AnimatedCardContainer from "./AnimatedCardContainer";
 
 export function WhyChooseUs() {
   return (
@@ -26,63 +28,75 @@ export function WhyChooseUs() {
                   Why choose us
                 </div>
               </div>
-              <h2
-                className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text
+              <AnimatedHeader className="">
+                <h2
+                  className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text
   [-webkit-background-clip:text]  lg:w-[55rem] mt-10 lg:leading-tight "
-              >
-                Why Choose Our <span className="hidden lg:block"></span>
-                <span className="block md:hidden"></span>
-                AI-Powered On-Site Search?
-              </h2>
-              <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5">
-                Our AI effortlessly navigates through your website information,
-                providing visitors with instant, accurate results.
-              </p>
+                >
+                  Why Choose Our <span className="hidden lg:block"></span>
+                  <span className="block md:hidden"></span>
+                  AI-Powered On-Site Search?
+                </h2>
+              </AnimatedHeader>
+              <AnimatedHeader className="">
+                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5">
+                  Our AI effortlessly navigates through your website
+                  information, providing visitors with instant, accurate
+                  results.
+                </p>
+              </AnimatedHeader>
             </div>
             <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5">
               {/* add des prop */}
-              <Card
-                title="Expertise in AI Technology"
-                icon={<AceternityIcon order="Reason 1" />}
-                des="With years of experience in artificial intelligence and machine learning, we're pioneers in delivering innovative search solutions tailored to your business needs"
-              >
-                <CanvasRevealEffect
-                  animationSpeed={5.1}
-                  // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-                  containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
-                />
-              </Card>
-              <Card
-                title="Customizable Solutions"
-                icon={<AceternityIcon order="Reason 2" />}
-                des="We understand that every business is unique. That's why we offer customizable solutions to suit your specific requirements and objectives."
-              >
-                <CanvasRevealEffect
-                  animationSpeed={3}
-                  // change bg-black to bg-pink-900
-                  containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-                  colors={[
-                    // change the colors of the
-                    [255, 166, 158],
-                    [221, 255, 247],
-                  ]}
-                  dotSize={2}
-                />
-                {/* Radial gradient for the cute fade */}
-                {/* remove this one */}
-                {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
-              </Card>
-              <Card
-                title="Proven Results"
-                icon={<AceternityIcon order="Reason 3" />}
-                des="Join the ranks of satisfied clients who have experienced increased conversion rates, higher customer satisfaction, and improved retention with our AI-powered on-site search."
-              >
-                <CanvasRevealEffect
-                  animationSpeed={3}
-                  containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-                  colors={[[125, 211, 252]]}
-                />
-              </Card>
+
+              <AnimatedCardContainer index={0}>
+                <Card
+                  title="Expertise in AI Technology"
+                  icon={<AceternityIcon order="Reason 1" />}
+                  des="With years of experience in artificial intelligence and machine learning, we're pioneers in delivering innovative search solutions tailored to your business needs"
+                >
+                  <CanvasRevealEffect
+                    animationSpeed={5.1}
+                    // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
+                    containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
+                  />
+                </Card>
+              </AnimatedCardContainer>
+              <AnimatedCardContainer index={1}>
+                <Card
+                  title="Customizable Solutions"
+                  icon={<AceternityIcon order="Reason 2" />}
+                  des="We understand that every business is unique. That's why we offer customizable solutions to suit your specific requirements and objectives."
+                >
+                  <CanvasRevealEffect
+                    animationSpeed={3}
+                    // change bg-black to bg-pink-900
+                    containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
+                    colors={[
+                      // change the colors of the
+                      [255, 166, 158],
+                      [221, 255, 247],
+                    ]}
+                    dotSize={2}
+                  />
+                  {/* Radial gradient for the cute fade */}
+                  {/* remove this one */}
+                  {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+                </Card>
+              </AnimatedCardContainer>
+              <AnimatedCardContainer index={2}>
+                <Card
+                  title="Proven Results"
+                  icon={<AceternityIcon order="Reason 3" />}
+                  des="Join the ranks of satisfied clients who have experienced increased conversion rates, higher customer satisfaction, and improved retention with our AI-powered on-site search."
+                >
+                  <CanvasRevealEffect
+                    animationSpeed={3}
+                    containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
+                    colors={[[125, 211, 252]]}
+                  />
+                </Card>
+              </AnimatedCardContainer>
             </div>
           </div>
         </div>
