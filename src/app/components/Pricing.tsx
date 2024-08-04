@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React, { ReactNode } from "react";
 // import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
@@ -12,6 +12,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedHeader from "./AnimatedHeader";
+import AnimatedCardContainer from "./AnimatedCardContainer";
 
 const pricingTiers = [
   {
@@ -66,28 +67,28 @@ const pricingTiers = [
   },
 ];
 
-type CardContainerProps = {
-  children: ReactNode;
-  index: number;
-};
+// type CardContainerProps = {
+//   children: ReactNode;
+//   index: number;
+// };
 
-const CardContainer = ({ children, index }: CardContainerProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+// const CardContainer = ({ children, index }: CardContainerProps) => {
+//   const [ref, inView] = useInView({
+//     triggerOnce: true,
+//     threshold: 0.1,
+//   });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 80 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
-      transition={{ duration: 0.5, delay: index * 0.5 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, y: 80 }}
+//       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
+//       transition={{ duration: 0.5, delay: index * 0.5 }}
+//     >
+//       {children}
+//     </motion.div>
+//   );
+// };
 
 const Pricing = () => {
   return (
@@ -121,7 +122,7 @@ const Pricing = () => {
                 { buttonText, features, inverse, monthlyPrice, popular, title },
                 index
               ) => (
-                <CardContainer key={title} index={index}>
+                <AnimatedCardContainer key={title} index={index}>
                   <div
                     className={twMerge(
                       "card bg-[#f2f2] text-[#f2f2f2] shadow-sm shadow-[#14093E]",
@@ -184,7 +185,7 @@ const Pricing = () => {
                       ))}
                     </ul>
                   </div>
-                </CardContainer>
+                </AnimatedCardContainer>
               )
             )}
             {/* {pricingTiers.map(
