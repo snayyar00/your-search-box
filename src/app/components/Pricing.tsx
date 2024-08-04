@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 // import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 
@@ -66,7 +66,12 @@ const pricingTiers = [
   },
 ];
 
-const CardContainer = ({ children, index }) => {
+type CardContainerProps = {
+  children: ReactNode;
+  index: number;
+};
+
+const CardContainer = ({ children, index }: CardContainerProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
