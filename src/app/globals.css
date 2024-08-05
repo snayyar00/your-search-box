@@ -71,6 +71,18 @@
   }
 }
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @layer components {
   .btn {
     @apply px-4 py-2 rounded-lg tracking-tight font-medium;
@@ -92,7 +104,7 @@
     @apply text-[#010D3E] text-[22px] tracking-tight leading-[30px] md:w-[480px]  text-center mt-5;
   }
   .tag {
-    @apply inline-flex border border-[#222]/10 w-fit py-1 px-3 rounded-xl text-sm tracking-tight;
+    @apply inline-flex border border-[#222]/10 w-fit py-1 px-3 rounded-xl text-sm tracking-tight   border-white;
   }
 
   .card {

@@ -54,7 +54,7 @@ const mediumScreenNavData = [
   },
   {
     id: 2,
-    name: "FYQ",
+    name: "FAQ",
     href: "#fyq",
   },
   {

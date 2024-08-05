@@ -25,7 +25,7 @@ export function WhyChooseUs() {
             </div>
             <div className="sm:w-[33.75rem] mx-auto  flex flex-col items-center   ">
               <div className="flex justify-center pb-5">
-                <div className="tag text-lg border border-white rounded-lg">
+                <div className="tag ">
                   Why choose us
                 </div>
               </div>

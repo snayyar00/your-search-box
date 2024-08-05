@@ -2,6 +2,11 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
+import TrolleyImage from "@/assets/features-images/trolley.gif";
+import ClockTimeImage from "@/assets/features-images/clock-time.gif";
+import BarChartImage from "@/assets/features-images/bar-chart.gif";
+import AvatarManImage from "@/assets/features-images/avatar-man.gif";
+
 import {
   IconClipboardCopy,
   IconFileBroken,
@@ -11,29 +16,36 @@ import {
 import Image from "next/image";
 import React from "react";
 
-import RealTImeImg from "@/assets/features-images/realtime.jpeg";
-import PersonalisedImg from "@/assets/features-images/personlized-search.jpeg";
-import NlpImg from "@/assets/features-images/nlp.jpeg";
-import DashboardImage from "@/assets/dashboard-layout.png";
-import GlobeImg from "@/assets/features-images/globe.jpeg";
 import { Spotlight } from "@/components/ui/spotlight";
 import { div } from "three/webgpu";
 import { cn } from "@/lib/utils";
 import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
-// import Globe from "@/components/magicui/globe";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+
+import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+
+import {
+  ChartColumnIncreasingIcon,
+  ChartLineIcon,
+  LucideSmile,
+  TimerIcon,
+} from "lucide-react";
 
 const Features = () => {
   return (
     <section
-      className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E]  relative"
+      className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E] overflow-clip "
       id="features"
     >
       <Spotlight
         className="top-[-304px] left-[32px] opacity-25 md:top-[-192px] md:left-[288px] lg:opacity-10"
         fill="violet"
       />
-      <div className="container">
-        <div className="sm:w-[33.75rem] mx-auto lg:w-[37.5rem] ">
+      <div className="relative">
+        <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
+          <BackgroundGridImage className="w-full h-full opacity-60" />
+        </div>
+        <div className="sm:w-[33.75rem] mx-auto lg:w-[37.5rem] py-10 ">
           <div className="flex justify-center pb-5">
             <div className="tag border border-white/50">Our Features</div>
           </div>
@@ -50,81 +62,65 @@ const Features = () => {
             </p>
           </AnimatedHeader>
         </div>
-        <AnimatedHeader className={""}>
-          <BentoGrid className="max-w-4xl lg:max-w-6xl mx-auto md:auto-rows-[26.25rem] mt-20 md:mt-28 lg:mt-30 gap-8  ">
-            {items.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                header={item.header}
-                className={item.className}
-              />
-            ))}
-          </BentoGrid>
-        </AnimatedHeader>
+        <div className=" min-w-full  py-10">
+          <StickyScroll content={content} contentClassName="" />
+        </div>
       </div>
     </section>
   );
 };
-// const Skeleton = () => (
-//   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-500 dark:bg-black"></div>
-// );
-
-const items = [
-  {
-    title: "Personalized Recommendations",
-    description:
-      "Harness the power of AI algorithms to deliver personalized product recommendations based on user behavior, preferences, and past interactions.",
-    header: (
-      <Image
-        src={PersonalisedImg}
-        alt="image"
-        className="flex flex-1  w-auto h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-90
- "
-      />
-    ),
-    className: "md:col-span-2",
-  },
-
-  {
-    title: "Natural Language Processing (NLP)",
-    description:
-      "Enable your customers to search using natural language queries, allowing them to express their needs in their own words and receive accurate results..",
-    header: (
-      <Image
-        src={NlpImg}
-        alt="image"
-        className="flex flex-1 w-full h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-80"
-      />
-    ),
-    className: "md:col-span-1",
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: (
-      <Image
-        src={GlobeImg}
-        alt="image"
-        className="flex flex-1 w-full h-full min-h-[3.125rem] rounded-xl md:object-cover opacity-80"
-      />
-    ),
-    className: "md:col-span-1",
-  },
-  {
-    title: "Real-Time Insights",
-    description:
-      "Gain valuable insights into customer behavior, popular search queries, and emerging trends to optimize your product offerings and marketing strategies.",
-    header: (
-      <Image
-        src={RealTImeImg}
-        alt="image"
-        className="flex flex-1 w-full h-full min-h-[6.25rem] rounded-xl md:object-cover opacity-90"
-      />
-    ),
-    className: "md:col-span-2",
-  },
-];
 
 export default Features;
+
+const content = [
+  {
+    title: "Boosted Click-Through Rates",
+    description:
+      "Our AI search dramatically increases click-through rates by delivering more relevant results. Users find exactly what they're looking for, leading to more engagement and conversions.",
+    content: (
+      <Image
+        src={BarChartImage}
+        alt="Icons by Lordicon.com"
+        height={150}
+        width={150}
+      />
+    ),
+  },
+  {
+    title: "Extended Time on Site",
+    description:
+      "With more accurate search results, users spend longer exploring your site. Our AI encourages discovery, keeping visitors engaged and increasing the likelihood of conversion.",
+    content: (
+      <Image
+        src={ClockTimeImage}
+        alt="Icons by Lordicon.com"
+        height={150}
+        width={150}
+      />
+    ),
+  },
+  {
+    title: "Improved Customer Satisfaction",
+    description:
+      "Users love finding what they need quickly and easily. Our AI search enhances the overall user experience, leading to higher customer satisfaction and loyalty.",
+    content:       <Image
+    src={AvatarManImage}
+    alt="Icons by Lordicon.com"
+    height={150}
+    width={150}
+  />
+  },
+  {
+    title: "Increased Sales",
+    description:
+      "By guiding users directly to relevant products or information, our AI search significantly boosts conversion rates and drives more sales for your business.",
+    content: (
+      <Image
+        src={TrolleyImage}
+        alt="Icons by Lordicon.com"
+        height={150}
+        width={150}
+      />
+    ),
+  },
+];

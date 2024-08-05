@@ -17,15 +17,15 @@ import ConvertUsers from "./components/ConvertUsers";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <LogoTicker />
       <OnePlaceForQuestion />
       <ConvertUsers />
       <ProductShowCase />
+      <Features />
       <TracingBeam>
-        <Features />
         <WhyChooseUs />
         <Pricing />
         <Testimonials />
@@ -33,6 +33,6 @@ export default function Home() {
         <CallToAction />
       </TracingBeam>
       <Footer />
-    </div>
+    </>
   );
 }
