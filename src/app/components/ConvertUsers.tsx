@@ -14,6 +14,24 @@ import {
   UserIcon,
 } from "lucide-react";
 
+const ConvertUsersData = [
+  {
+    id: 1,
+    title: "Provide scenario-specific help",
+    icon: StarIcon,
+  },
+  {
+    id: 2,
+    title: "Reduce implementation times",
+    icon: TimerIcon,
+  },
+  {
+    id: 3,
+    title: "Identify dropoff points and fix them",
+    icon: UserIcon,
+  },
+];
+
 const ConvertUsers = () => {
   return (
     <div className="bg-gradient-to-b from-[#f2f2f2] to-[#efefe3] min-w-full py-16 md:py-24">
@@ -32,26 +50,14 @@ const ConvertUsers = () => {
           </div>
           <div className="flex-1">
             <div className="flex items-start flex-col space-y-16 lg:space-y-20 justify-center  font-medium max-w-full lg:max-w-md h-full text-lg lg:text-xl">
-              <div className="flex items-center">
-                <div className="flex flex-row flex-auto md:justify-center items-center">
-                  <TargetIcon className="h-[30px] w-[30px] mr-5 text-blue-400" />
-                  <p className="text-left">Provide scenario-specific help</p>
+              {ConvertUsersData.map(({ id, icon: IconImg, title }) => (
+                <div className="flex items-center" key={id}>
+                  <div className="flex flex-row flex-auto md:justify-center items-center">
+                    <IconImg className="text-blue-400 h-[30px] w-[30px] mr-5" />
+                    <p className="text-left">{title}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center">
-                <div className="flex flex-row flex-auto md:justify-center items-center">
-                  <TimerIcon className="h-[30px] mr-5 text-blue-400" />
-                  <p className="text-left">Reduce implementation times</p>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <div className="flex flex-row flex-auto md:justify-center items-center">
-                  <UserIcon className="h-[30px] w-[30px] mt-1 mr-5 text-blue-400" />
-                  <p className="text-left">
-                    Identify dropoff points and fix them
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
