@@ -1,6 +1,4 @@
-// "use client";
 import React, { ReactNode } from "react";
-// import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 
 import { CheckIcon } from "lucide-react";
@@ -11,8 +9,8 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import AnimatedHeader from "./AnimatedHeader";
-import AnimatedCardContainer from "./AnimatedCardContainer";
+import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
+import AnimatedCardContainer from "../../components/custom-animations/AnimatedCardContainer";
 
 const pricingTiers = [
   {
@@ -67,29 +65,6 @@ const pricingTiers = [
   },
 ];
 
-// type CardContainerProps = {
-//   children: ReactNode;
-//   index: number;
-// };
-
-// const CardContainer = ({ children, index }: CardContainerProps) => {
-//   const [ref, inView] = useInView({
-//     triggerOnce: true,
-//     threshold: 0.1,
-//   });
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       initial={{ opacity: 0, y: 80 }}
-//       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
-//       transition={{ duration: 0.5, delay: index * 0.5 }}
-//     >
-//       {children}
-//     </motion.div>
-//   );
-// };
-
 const Pricing = () => {
   return (
     <div className="py-24 relative" id="pricing">
@@ -97,12 +72,6 @@ const Pricing = () => {
       <div className="container relative">
         <StarsBackground className="opacity-70 z-1" />
         <div className="flex flex-col relative">
-          {/* <h1
-            className="section-header pt-5  from-white to-[#586285] text-transparent bg-clip-text
-  [-webkit-background-clip:text] py-5 lg:text-7xl lg:tracking-wide"
-          >
-            Pricing
-          </h1> */}
           <AnimatedHeader
             className="section-header pt-5 from-white to-[#586285] text-transparent bg-clip-text
             [-webkit-background-clip:text] py-5 lg:text-7xl lg:tracking-wide"
@@ -130,7 +99,6 @@ const Pricing = () => {
                         "bg-black text-white border border-black/90"
                     )}
                   >
-                    {/* Your existing card content here */}
                     <div className="flex items-center justify-between">
                       <h3
                         className={twMerge(
@@ -188,79 +156,6 @@ const Pricing = () => {
                 </AnimatedCardContainer>
               )
             )}
-            {/* {pricingTiers.map(
-              ({
-                title,
-                monthlyPrice,
-                popular,
-                features,
-                buttonText,
-                inverse,
-              }) => (
-                <div
-                  key={title}
-                  className={twMerge(
-                    "card bg-[#f2f2] text-[#f2f2f2] shadow-sm shadow-[#14093E]",
-                    inverse === true &&
-                      "bg-black text-white border border-black/90"
-                  )}
-                >
-                  <div className="flex items-center justify-between">
-                    <h3
-                      className={twMerge(
-                        "text-[#6F6C90] font-medium text-lg",
-                        inverse && "text-white/70"
-                      )}
-                    >
-                      {title}
-                    </h3>
-                    {popular && (
-                      <Link href="/sign-up">
-                        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                          Most Popular
-                        </button>
-                      </Link>
-                    )}
-                  </div>
-                  <p className="flex gap-1 items-baseline mt-[30px]  ">
-                    <span className="font-bold text-5xl tracking-tighter leading-none">
-                      ${monthlyPrice}
-                    </span>
-                    <span
-                      className={twMerge(
-                        "text-[#6F6C90] font-medium text-xl tracking-tighter",
-                        inverse && "text-white/70"
-                      )}
-                    >
-                      /monthly
-                    </span>
-                  </p>
-                  <Link href="/sign-up">
-                    <button
-                      className={twMerge(
-                        "btn btn-primary w-full my-[30px] hover:translate-x-1 -hover:translate-y-1 hover:duration-300",
-                        inverse && "bg-white text-black"
-                      )}
-                    >
-                      {buttonText}
-                    </button>
-                  </Link>
-                  <ul className="flex flex-col gap-5 ">
-                    {features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="text-base flex items-center gap-4 "
-                      >
-                        <span>
-                          <CheckIcon className="w-6 h-6" />
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )
-            )} */}
           </div>
         </div>
       </div>

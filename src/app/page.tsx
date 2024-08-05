@@ -12,6 +12,8 @@ import CallToAction from "./components/CallToAction";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import OnePlaceForQuestion from "./components/OnePlaceForQuestion";
+import ConvertUsers from "./components/ConvertUsers";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <Header />
       <Hero />
       <LogoTicker />
+      <OnePlaceForQuestion />
+      <ConvertUsers />
       <ProductShowCase />
       <TracingBeam>
         <Features />

@@ -8,7 +8,7 @@ import TubeIcon from "@/assets/tube.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ShineBorder from "@/components/magicui/shine-border";
 import BlurFade from "@/components/magicui/blur-fade";
-import AnimatedHeader from "./AnimatedHeader";
+import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 
 const theme = "white";
 

@@ -19,7 +19,7 @@ import GlobeImg from "@/assets/features-images/globe.jpeg";
 import { Spotlight } from "@/components/ui/spotlight";
 import { div } from "three/webgpu";
 import { cn } from "@/lib/utils";
-import AnimatedHeader from "./AnimatedHeader";
+import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 // import Globe from "@/components/magicui/globe";
 
 const Features = () => {

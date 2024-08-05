@@ -12,30 +12,15 @@ import { link } from "fs";
 import Image from "next/image";
 
 const navData = [
-  // {
-  //   id: 1,
-  //   name: "Products",
-  //   href: "#products",
-  // },
-  // {
-  //   id: 2,
-  //   name: "Platforms",
-  //   href: "#platforms",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Who we serve",
-  //   href: "#whoweserve",
-  // },
   {
     id: 1,
-    name: "Partners",
-    href: "#partners",
+    name: "Docs",
+    href: "#docs",
   },
   {
     id: 2,
-    name: "Features",
-    href: "#features",
+    name: "Showcase",
+    href: "#showcase",
   },
   {
     id: 3,
@@ -44,8 +29,8 @@ const navData = [
   },
   {
     id: 4,
-    name: "Testimonials",
-    href: "#testimonials",
+    name: "Team",
+    href: "#Team",
   },
   {
     id: 5,
@@ -58,16 +43,7 @@ const navData = [
     href: "#contact",
   },
 
-  // {
-  //   id: 6,
-  //   name: "Resources",
-  //   href: "#resources",
-  // },
-  // {
-  //   id: 7,
-  //   name: "About",
-  //   href: "#about",
-  // },
+
 ];
 
 const mediumScreenNavData = [
@@ -106,10 +82,7 @@ const Header = () => {
                 className="h-[40px] w-auto md:h-[70] -ml-2 md:ml-0"
               />
             </Link>
-            {/* <div className="border border-white border-opacity-30 h-10 w-10 inline-flex items-center justify-center rounded-lg sm:hidden ">
-              <MenuIcon className="text-white" />
-            </div> */}
-            {/* <nav className="md:flex items-center gap-10 lg:gap-6 hidden"> */}
+
             <nav className="md:flex  md:justify-between md:items-center md:gap-16">
               <div className="hidden lg:flex items-center gap-6 text-white/90">
                 {navData.map(({ href, id, name }) => (

@@ -12,7 +12,6 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 import SparklesText from "@/components/magicui/sparkles-text";
 import CircularLogo from "@/assets/circular-logo.svg";
-// import { SearchBoxImage } from "@/assets/search-box.png";
 import SearchBoxImage from "@/assets/search-box.png";
 import Image from "next/image";
 
