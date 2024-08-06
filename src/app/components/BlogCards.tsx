@@ -63,7 +63,7 @@ const BlogCards = () => {
                     href={`/blog/${post.id}`}
                     className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
-                    Read more
+                    read full blog
                   </Link>
                 </motion.div>
               </div>
