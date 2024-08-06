@@ -47,7 +47,7 @@ const KeyMetrics = () => {
         <div className="container">
           {/* background grid */}
           <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
-            <BackgroundGridImage className="w-full h-full opacity-60" />
+            <BackgroundGridImage className="w-full h-full opacity-60" alt='background-grid' />
           </div>
           <div>
             <div className="w-full absolute left-[50rem] top-[15rem] min-h-96  ">
@@ -69,7 +69,7 @@ const KeyMetrics = () => {
                 </h2>
               </AnimatedHeader>
               <AnimatedHeader className="">
-                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5  w-[45rem]">
+                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 my-8  w-[45rem]">
                   Powered by advanced AI technology, our search solution
                   seamlessly integrates into your website, providing
                   intelligent, context-aware results tailored to your
@@ -78,7 +78,7 @@ const KeyMetrics = () => {
               </AnimatedHeader>
             </div>
           </div>
-          <div>
+          <div className="">
             <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               <div className="absolute inset-0 bg-gradient-radial from-blue-500/10 via-transparent to-transparent pointer-events-none"></div>
               {featuresData.map((feature, index) => (

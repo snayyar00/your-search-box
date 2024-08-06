@@ -1,41 +1,28 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 import TrolleyImage from "@/assets/features-images/trolley.gif";
 import ClockTimeImage from "@/assets/features-images/clock-time.gif";
 import BarChartImage from "@/assets/features-images/bar-chart.gif";
 import AvatarManImage from "@/assets/features-images/avatar-man.gif";
 
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+;
 import Image from "next/image";
 import React from "react";
 
 import { Spotlight } from "@/components/ui/spotlight";
-import { div } from "three/webgpu";
-import { cn } from "@/lib/utils";
+
 import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 
-import {
-  ChartColumnIncreasingIcon,
-  ChartLineIcon,
-  LucideSmile,
-  TimerIcon,
-} from "lucide-react";
 
 const KeyMetrics = () => {
   return (
     <section
       className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E] overflow-clip "
       id="features"
+            aria-label="Key Metrics Section"
     >
       <Spotlight
         className="top-[-304px] left-[32px] opacity-25 md:top-[-192px] md:left-[288px] lg:opacity-10"
@@ -62,7 +49,7 @@ const KeyMetrics = () => {
             </p>
           </AnimatedHeader>
         </div>
-        <div className=" min-w-full  pt-12">
+        <div className=" min-w-full  py-12">
           <StickyScroll content={content} contentClassName="" />
         </div>
       </div>

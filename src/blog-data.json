@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Revolutionizing E-commerce with AI-Powered Search",
+    "description": "Discover how AI is transforming online shopping experiences and boosting conversion rates.",
+    "img": "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "id": 2,
+    "title": "The Future of Site Search: Trends to Watch",
+    "description": "Explore upcoming innovations in website search technology and their potential impact on user experience.",
+    "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+  },
+  {
+    "id": 3,
+    "title": "Optimizing Your Website's Search Functionality",
+    "description": "Learn best practices for implementing and fine-tuning your site's search capabilities.",
+    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "id": 4,
+    "title": "The Role of Natural Language Processing in Modern Search",
+    "description": "Understand how NLP is enhancing search accuracy and user satisfaction across digital platforms.",
+    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  }
+]

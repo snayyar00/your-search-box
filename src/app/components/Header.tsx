@@ -30,12 +30,12 @@ const navData = [
   {
     id: 4,
     name: "Team",
-    href: "#Team",
+    href: "/team",
   },
   {
     id: 5,
-    name: "FYQ",
-    href: "#fyq",
+    name: "Blogs",
+    href: "#blogs",
   },
   {
     id: 6,

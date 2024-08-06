@@ -45,7 +45,7 @@ export function WhyChooseUs() {
                 </h2>
               </AnimatedHeader>
               <AnimatedHeader className="">
-                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5">
+                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 my-10">
                   Our AI effortlessly navigates through your website
                   information, providing visitors with instant, accurate
                   results.

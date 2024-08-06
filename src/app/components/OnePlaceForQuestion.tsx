@@ -27,7 +27,7 @@ const OnePlaceForQuestion = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-[#f2f2f2] to-[#efefe3] min-w-full py-16 md:py-24">
+    <div className="bg-gradient-to-b from-[#f2f2f2] to-[#efefe3] min-w-full py-16 md:py-24" role="main">
       <div className="container realtive">
         <div className="sm:w-[33.75rem] mx-auto lg:w-[45rem]  lg:leading-tight">
           <div className="flex justify-center pb-5">
@@ -51,7 +51,7 @@ const OnePlaceForQuestion = () => {
               <AnimatedBeamShow />
             </div>
 
-            <div className="z-20 bg-gray-300 rounded-full h-[10.5rem] w-[11rem] text-center flex">
+            <div className="z-20 bg-gray-300 rounded-full h-[10.5rem] w-[11rem] text-center flex" role="alert" aria-live="polite">
               <AnimatePresence mode="wait">
                 <motion.p
                   key={currentIndex}

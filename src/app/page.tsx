@@ -14,6 +14,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import OnePlaceForQuestion from "./components/OnePlaceForQuestion";
 import KeyMetrics from "./components/KeyMetrics";
 import Features from "./components/Features";
+import BlogCards from "./components/BlogCards";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Testimonials />
         <FYQ />
         <CallToAction />
+        <BlogCards />
       </TracingBeam>
       <Footer />
     </>
