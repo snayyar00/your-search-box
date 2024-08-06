@@ -15,7 +15,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -39,18 +39,18 @@ export function AnimatedBeamShow() {
       className="flex overflow-hidden relative justify-center items-center p-10 px-10 w-full max-w-full bg-transparent"
       ref={containerRef}
     >
-      <div className="flex flex-col gap-10 justify-between items-stretch w-full h-full">
-        <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-col gap-10 justify-between items-stretch w-full h-full ">
+        <div className="flex flex-row justify-between items-center ">
           <Circle ref={div1Ref}>
-            <Icons.googleDrive />
+            <Icons.pdf />
           </Circle>
           <Circle ref={div5Ref}>
-            <Icons.googleDocs />
+            <Icons.wordpress />
           </Circle>
         </div>
         <div className="flex flex-row justify-between items-center">
           <Circle ref={div2Ref}>
-            <Icons.notion />
+            <Icons.website />
           </Circle>
           <Circle
             ref={div4Ref}
@@ -63,15 +63,15 @@ export function AnimatedBeamShow() {
             />
           </Circle>
           <Circle ref={div6Ref}>
-            <Icons.zapier />
+            <Icons.code />
           </Circle>
         </div>
         <div className="flex flex-row justify-between items-center">
           <Circle ref={div3Ref}>
-            <Icons.whatsapp />
+            <Icons.text />
           </Circle>
           <Circle ref={div7Ref}>
-            <Icons.messenger />
+            <Icons.shopify />
           </Circle>
         </div>
       </div>
@@ -185,6 +185,86 @@ const Icons = {
       />
     </svg>
   ),
+  // create a svg for pdf
+  pdf: () => (
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 3C5.9 3 5 3.9 5 5V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V5C19 3.9 18.1 3 17 3H7ZM7 5H17V19H7V5Z"
+        fill="#FF0000"
+      />
+      <path
+        d="M9 7H15V9H9V7ZM9 11H15V13H9V11ZM9 15H13V17H9V15Z"
+        fill="#FF0000"
+      />
+    </svg>
+  ),
+  //  create a svg for website
+  website: () => (
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+        fill="#4285F4"
+      />
+    </svg>
+  ),
+  // create a svg for text
+  text: () => (
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
+        fill="#4285F4"
+      />
+      <path
+        d="M14 2V8H20L14 2ZM16 13H8V15H16V13ZM16 17H8V19H16V17ZM16 9H8V11H16V9Z"
+        fill="#AECBFA"
+      />
+    </svg>
+  ),
+  // create a svg for wordpress
+  wordpress: () => (
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM3.68 12c0-1.33.32-2.58.88-3.7l4.88 13.38C5.84 20.22 3.68 16.39 3.68 12zM12 20.32c-.9 0-1.78-.13-2.61-.36l2.77-8.06 2.84 7.78c.02.05.04.09.07.13-.95.33-1.98.51-3.07.51zm1.27-13.92c.56-.03 1.06-.08 1.06-.08.5-.06.44-1.19-.06-1.13 0 0-1.5.12-2.47.12-.91 0-2.44-.12-2.44-.12-.5-.06-.56 1.07-.06 1.13 0 0 .47.05.97.08l1.44 3.94-2.02 6.06-3.36-10h1.06c.56-.03 1.06-.08 1.06-.08.5-.06.44-1.19-.06-1.13 0 0-1.5.12-2.47.12-.17 0-.38 0-.59-.01C7.92 4.4 9.86 3.68 12 3.68c2.7 0 5.15 1.03 6.98 2.72-.04 0-.09-.01-.14-.01-.91 0-1.56.79-1.56 1.64 0 .76.44 1.41.91 2.17.35.61.77 1.38.77 2.51 0 .78-.3 1.68-.69 2.94l-.91 3.04-3.29-9.79zm6.37 9.64l2.79-8.06c.52-1.3.69-2.34.69-3.26 0-.33-.02-.64-.07-.94.72 1.31 1.13 2.81 1.13 4.41 0 3.43-1.86 6.42-4.62 8.03l.08-.18z"
+        fill="#21759B"
+      />
+    </svg>
+  ),
+
+  // create a svg for code
+  code: () => (
+    <svg
+      width="200"
+      height="200"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+        fill="#0077B5"
+      />
+    </svg>
+  ),
+
   whatsapp: () => (
     <svg
       width="100"
@@ -239,6 +319,30 @@ const Icons = {
       />
     </svg>
   ),
+
+  shopify: () => (
+    <svg
+      width="800px"
+      height="800px"
+      viewBox="-18 0 292 292"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+    >
+      <path
+        d="M223.774 57.34c-.201-1.46-1.48-2.268-2.537-2.357-1.055-.088-23.383-1.743-23.383-1.743s-15.507-15.395-17.209-17.099c-1.703-1.703-5.029-1.185-6.32-.805-.19.056-3.388 1.043-8.678 2.68-5.18-14.906-14.322-28.604-30.405-28.604-.444 0-.901.018-1.358.044C129.31 3.407 123.644.779 118.75.779c-37.465 0-55.364 46.835-60.976 70.635-14.558 4.511-24.9 7.718-26.221 8.133-8.126 2.549-8.383 2.805-9.45 10.462C21.3 95.806.038 260.235.038 260.235l165.678 31.042 89.77-19.42S223.973 58.8 223.775 57.34zM156.49 40.848l-14.019 4.339c.005-.988.01-1.96.01-3.023 0-9.264-1.286-16.723-3.349-22.636 8.287 1.04 13.806 10.469 17.358 21.32zm-27.638-19.483c2.304 5.773 3.802 14.058 3.802 25.238 0 .572-.005 1.095-.01 1.624-9.117 2.824-19.024 5.89-28.953 8.966 5.575-21.516 16.025-31.908 25.161-35.828zm-11.131-10.537c1.617 0 3.246.549 4.805 1.622-12.007 5.65-24.877 19.88-30.312 48.297l-22.886 7.088C75.694 46.16 90.81 10.828 117.72 10.828z"
+        fill="#95BF46"
+      />
+      <path
+        d="M221.237 54.983c-1.055-.088-23.383-1.743-23.383-1.743s-15.507-15.395-17.209-17.099c-.637-.634-1.496-.959-2.394-1.099l-12.527 256.233 89.762-19.418S223.972 58.8 223.774 57.34c-.201-1.46-1.48-2.268-2.537-2.357"
+        fill="#5E8E3E"
+      />
+      <path
+        d="M135.242 104.585l-11.069 32.926s-9.698-5.176-21.586-5.176c-17.428 0-18.305 10.937-18.305 13.693 0 15.038 39.2 20.8 39.2 56.024 0 27.713-17.577 45.558-41.277 45.558-28.44 0-42.984-17.7-42.984-17.7l7.615-25.16s14.95 12.835 27.565 12.835c8.243 0 11.596-6.49 11.596-11.232 0-19.616-32.16-20.491-32.16-52.724 0-27.129 19.472-53.382 58.778-53.382 15.145 0 22.627 4.338 22.627 4.338"
+        fill="#FFF"
+      />
+    </svg>
+  ),
+
   googleDocs: () => (
     <svg
       width="47px"

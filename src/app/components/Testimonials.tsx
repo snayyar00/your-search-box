@@ -13,6 +13,9 @@ import avatar9 from "@/assets/testimonials/avatar-9.png";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
+import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+
+
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -129,6 +132,9 @@ const Testimonials = () => {
     <div className=" py-16 lg:py-24 text-white/90" id="testimonials">
       <div className="container">
         <div className="flex justify-center">
+        <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
+          <BackgroundGridImage className="w-full h-full opacity-60" />
+        </div>
           <div className="tag text-lg border border-gray-200  rounded-lg">
             Testimonials
           </div>

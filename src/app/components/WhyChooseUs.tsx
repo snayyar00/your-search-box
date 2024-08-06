@@ -1,16 +1,23 @@
-// "use client";
-import React from "react";
-
-import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { Button } from "@/components/ui/button";
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
 
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
-import AnimatedCardContainer from "../../components/custom-animations/AnimatedCardContainer";
-import {Card} from '@/components/custom-animations/Card'
+
+import SearchBoxTop from "@/assets/features-images/Search-Box-Preview.png";
+import CustomizedSearchBox from "@/assets/features-images/Customize-box.png";
+import SearchBoxBottom from "@/assets/features-images/Search-Box Bottom-Bar.png";
+import DashboardImge from "@/assets/dashboard-layout.png";
+
 
 export function WhyChooseUs() {
+  const [activeButton, setActiveButton] = useState("design");
+
+  const handleButtonClick = (buttonType: string) => {
+    console.log("click");
+    setActiveButton(buttonType);
+  };
   return (
     <>
       <section className="py-12 md:py-24 text-white relative overflow-clip ">
@@ -25,9 +32,7 @@ export function WhyChooseUs() {
             </div>
             <div className="sm:w-[33.75rem] mx-auto  flex flex-col items-center   ">
               <div className="flex justify-center pb-5">
-                <div className="tag ">
-                  Why choose us
-                </div>
+                <div className="tag ">Why choose us</div>
               </div>
               <AnimatedHeader className="">
                 <h2
@@ -47,55 +52,293 @@ export function WhyChooseUs() {
                 </p>
               </AnimatedHeader>
             </div>
-            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-5">
-              {/* add des prop */}
+          </div>
+          <div className="mt-20 relative">
+            {/* Gradient blur effect */}
+            <div className="absolute inset-0 bg-gradient-radial from-blue-500/20 via-purple-500/40 to-transparent pointer-events-none "></div>
 
-              <AnimatedCardContainer index={0}>
-                <Card
-                  title="Expertise in AI Technology"
-                  icon={<AceternityIcon order="Reason 1" />}
-                  des="With years of experience in artificial intelligence and machine learning, we're pioneers in delivering innovative search solutions tailored to your business needs"
-                >
-                  <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
-                    containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
+            {/* Bento grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* First row - full width */}
+              <div className="col-span-1 md:col-span-2 bg-white/5 backdrop-blur-sm rounded-lg p-8 transition-all duration-700 ease-in-out hover:shadow-lg overflow-hidden group relative h-[50rem]">
+                <div className="flex flex-col transition-all duration-700 ease-in-out transform group-hover:-translate-y-full gap-4">
+                  <h3 className="text-2xl font-semibold  text-white">
+                    AI-Powered Precision
+                  </h3>
+                  <p className="text-white/80  transition-all duration-700 ease-in-out w-[55rem] group-hover:mb-[2rem] ">
+                    Experience unparalleled search accuracy with our AI that
+                    learns and adapts to your website&apos;s content, providing
+                    visitors with instant, relevant results.
+                  </p>
+                </div>
+                <div className="absolute inset-x-0 bottom-0 h-full transition-all duration-700 ease-in-out transform translate-y-1/4 group-hover:translate-y-0 px-[2rem] group-hover:mt-[2rem]">
+                  <Image
+                    src={DashboardImge}
+                    alt={"dashboard-image"}
+                    className="rounded-lg invert transition-all duration-700 ease-in-out mt-[2rem]"
                   />
-                </Card>
-              </AnimatedCardContainer>
-              <AnimatedCardContainer index={1}>
-                <Card
-                  title="Customizable Solutions"
-                  icon={<AceternityIcon order="Reason 2" />}
-                  des="We understand that every business is unique. That's why we offer customizable solutions to suit your specific requirements and objectives."
+                </div>
+              </div>
+
+              {/* Second row - two columns */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg overflow-hidden">
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  Seamless Integration
+                </h3>
+                <p className="text-white/80 mb-4">
+                  Effortlessly integrate your-search-box into your website with
+                  minimal setup, enhancing user experience instantly.
+                </p>
+                <svg
+                  className="w-full h-48"
+                  viewBox="0 0 200 100"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <CanvasRevealEffect
-                    animationSpeed={3}
-                    // change bg-black to bg-pink-900
-                    containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-                    colors={[
-                      // change the colors of the
-                      [255, 166, 158],
-                      [221, 255, 247],
-                    ]}
-                    dotSize={2}
+                  {/* Monitor */}
+                  <rect
+                    x="10"
+                    y="5"
+                    width="180"
+                    height="90"
+                    rx="5"
+                    fill="#333"
+                  />
+                  <rect
+                    x="15"
+                    y="10"
+                    width="170"
+                    height="75"
+                    rx="2"
+                    fill="#fff"
                   />
 
-                </Card>
-              </AnimatedCardContainer>
-              <AnimatedCardContainer index={2}>
-                <Card
-                  title="Proven Results"
-                  icon={<AceternityIcon order="Reason 3" />}
-                  des="Join the ranks of satisfied clients who have experienced increased conversion rates, higher customer satisfaction, and improved retention with our AI-powered on-site search."
-                >
-                  <CanvasRevealEffect
-                    animationSpeed={3}
-                    containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-                    colors={[[125, 211, 252]]}
+                  {/* Website */}
+                  <rect x="20" y="15" width="160" height="65" fill="#f0f0f0" />
+
+                  {/* Search bar */}
+                  <rect
+                    x="30"
+                    y="20"
+                    width="140"
+                    height="10"
+                    rx="5"
+                    fill="#e0e0e0"
                   />
-                </Card>
-              </AnimatedCardContainer>
+                  <circle cx="160" cy="25" r="3" fill="#22D3EE">
+                    <animate
+                      attributeName="fill"
+                      values="#22D3EE;#4F46E5;#22D3EE"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+
+                  {/* Grid of items */}
+                  <rect x="30" y="35" width="30" height="30" fill="#ddd" />
+                  <rect x="65" y="35" width="30" height="30" fill="#ddd" />
+                  <rect x="100" y="35" width="30" height="30" fill="#ddd" />
+                  <rect x="135" y="35" width="30" height="30" fill="#ddd" />
+
+                  <rect x="30" y="70" width="30" height="5" fill="#bbb" />
+                  <rect x="65" y="70" width="30" height="5" fill="#bbb" />
+                  <rect x="100" y="70" width="30" height="5" fill="#bbb" />
+                  <rect x="135" y="70" width="30" height="5" fill="#bbb" />
+
+                  {/* Animation for items */}
+                  <rect
+                    x="30"
+                    y="35"
+                    width="30"
+                    height="30"
+                    fill="#22D3EE"
+                    opacity="0"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0;0.3;0"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                  <rect
+                    x="65"
+                    y="35"
+                    width="30"
+                    height="30"
+                    fill="#22D3EE"
+                    opacity="0"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0;0.3;0"
+                      dur="3s"
+                      begin="1s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                  <rect
+                    x="100"
+                    y="35"
+                    width="30"
+                    height="30"
+                    fill="#22D3EE"
+                    opacity="0"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0;0.3;0"
+                      dur="3s"
+                      begin="2s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                  <rect
+                    x="135"
+                    y="35"
+                    width="30"
+                    height="30"
+                    fill="#22D3EE"
+                    opacity="0"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0;0.3;0"
+                      dur="3s"
+                      begin="0.5s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                </svg>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg overflow-hidden">
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  Boost Conversions
+                </h3>
+                <p className="text-white/80 mb-4 pr-2">
+                  Satisfy customers with accurate answers, leading to improved
+                  engagement and higher conversion rates.
+                </p>
+                <svg
+                  className="w-full h-48"
+                  viewBox="0 0 200 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 90 L70 30 L130 70 L190 10"
+                    fill="none"
+                    stroke="#10B981"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  >
+                    <animate
+                      attributeName="stroke-dasharray"
+                      from="0 300"
+                      to="300 0"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                  <circle cx="70" cy="30" r="5" fill="#10B981">
+                    <animate
+                      attributeName="r"
+                      values="5;7;5"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="130" cy="70" r="5" fill="#10B981">
+                    <animate
+                      attributeName="r"
+                      values="5;7;5"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </svg>
+              </div>
+
+              {/* Third row - full width with interactive buttons */}
+              <div className="col-span-1 md:col-span-2 bg-white/5 backdrop-blur-sm rounded-lg p-8 transition-all duration-300 ease-in-out hover:shadow-lg relative z-10 overflow-hidden">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-2/3 pr-8">
+                    <h3 className="text-2xl font-semibold mb-4 text-white transition-all duration-300 ease-in-out">
+                      Customizable Experience
+                    </h3>
+                    <p className="text-white/80 mb-6 transition-all duration-300 ease-in-out">
+                      Tailor your-search-box to fit your brand and meet specific
+                      user needs with our flexible customization options.
+                    </p>
+                    <div className="flex  bg-[#14093E] rounded-full w-fit p-2 border-gray-700 border">
+                      <button
+                        className={`px-4 py-2 rounded-full transition-colors duration-300 focus:outline-none border border-[#E5E6E9]/20 ${
+                          activeButton === "design"
+                            ? "bg-[#f2f2] text-[#D9DBDD] border border-gray-600"
+                            : "text-[#E5E6E9] border-none"
+                        }`}
+                        onClick={() => handleButtonClick("design")}
+                      >
+                        Option 1
+                      </button>
+                      <button
+                        className={`px-4 py-2 rounded-full transition-colors duration-300 focus:outline-none border border-[#E5E6E9]/20 ${
+                          activeButton === "features"
+                            ? "bg-[#f2f2] text-[#D9DBDD] border border-gray-600"
+                            : "text-[#E5E6E9] border-none"
+                        }`}
+                        onClick={() => handleButtonClick("features")}
+                      >
+                        Option 2
+                      </button>
+                      <button
+                        className={`px-4 py-2 rounded-full transition-colors duration-300 focus:outline-none border border-[#E5E6E9]/20 ${
+                          activeButton === "analytics"
+                            ? "bg-[#f2f2] text-[#D9DBDD] border border-gray-600"
+                            : "text-[#E5E6E9] border-none"
+                        }`}
+                        onClick={() => handleButtonClick("analytics")}
+                      >
+                        Option 3
+                      </button>
+                    </div>
+                  </div>
+                  <div className="md:w-1/3 mt-6 md:mt-0">
+                    <div className="relative w-full h-48 transition-all duration-500 ease-in-out">
+                      {["design", "features", "analytics"].map((type) => (
+                        <div
+                          key={type}
+                          className={`w-full h-full absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${
+                            activeButton === type ? "opacity-100" : "opacity-0"
+                          }`}
+                        >
+                          {type === "design" && (
+                            <>
+                              <Image src={SearchBoxTop} alt="search-box-top" />
+                            </>
+                          )}
+                          {type === "features" && (
+                            <>
+                              <Image
+                                src={CustomizedSearchBox}
+                                alt="search-box-top"
+                              />
+                            </>
+                          )}
+                          {type === "analytics" && (
+                            <>
+                              <Image
+                                src={SearchBoxBottom}
+                                alt="search-box-top"
+                                className=""
+                              />
+                            </>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -103,27 +346,3 @@ export function WhyChooseUs() {
     </>
   );
 }
-const AceternityIcon = ({ order }: { order: string }) => {
-  return (
-    <div>
-
-      <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
-        <span
-          className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
-         bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-        />
-        <span
-          className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-violet-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
-        >
-          {order}
-        </span>
-      </button>
-    </div>
-
-  );
-};
-
-
-
-

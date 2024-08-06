@@ -1,126 +1,109 @@
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-
-import TrolleyImage from "@/assets/features-images/trolley.gif";
-import ClockTimeImage from "@/assets/features-images/clock-time.gif";
-import BarChartImage from "@/assets/features-images/bar-chart.gif";
-import AvatarManImage from "@/assets/features-images/avatar-man.gif";
-
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-import Image from "next/image";
-import React from "react";
-
-import { Spotlight } from "@/components/ui/spotlight";
-import { div } from "three/webgpu";
-import { cn } from "@/lib/utils";
-import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 
-import {
-  ChartColumnIncreasingIcon,
-  ChartLineIcon,
-  LucideSmile,
-  TimerIcon,
-} from "lucide-react";
+const featuresData = [
+  {
+    icon: "🔍",
+    title: "Smart Search",
+    description:
+      "AI-powered search that understands context and user intent for more accurate results.",
+  },
+  {
+    icon: "📊",
+    title: "Analytics Dashboard",
+    description:
+      "Comprehensive insights into search patterns and user behavior to optimize your content.",
+  },
+  {
+    icon: "🚀",
+    title: "Performance Boost",
+    description:
+      "Lightning-fast search results that enhance user experience and engagement.",
+  },
+  {
+    icon: "🔧",
+    title: "Easy Integration",
+    description:
+      "Seamless integration with your existing website or application with minimal setup.",
+  },
+  {
+    icon: "🎨",
+    title: "Customizable UI",
+    description:
+      "Fully customizable search interface to match your brand and design preferences.",
+  },
+  {
+    icon: "🔒",
+    title: "Secure & Scalable",
+    description:
+      "Enterprise-grade security and scalability to handle growing search volumes.",
+  },
+];
 
-const Features = () => {
+const KeyMetrics = () => {
   return (
-    <section
-      className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E] overflow-clip "
-      id="features"
-    >
-      <Spotlight
-        className="top-[-304px] left-[32px] opacity-25 md:top-[-192px] md:left-[288px] lg:opacity-10"
-        fill="violet"
-      />
-      <div className="relative">
-        <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
-          <BackgroundGridImage className="w-full h-full opacity-60" />
-        </div>
-        <div className="sm:w-[33.75rem] mx-auto lg:w-[37.5rem] py-10 ">
-          <div className="flex justify-center pb-5">
-            <div className="tag border border-white/50">Our Features</div>
+    <>
+      <section className="py-12 md:py-24 text-white relative overflow-clip ">
+        <div className="container">
+          {/* background grid */}
+          <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
+            <BackgroundGridImage className="w-full h-full opacity-60" />
           </div>
-          <AnimatedHeader className={""}>
-            <h2 className="section-header bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)] lg:leading-tight ">
-              A effective solution for better search
-            </h2>
-          </AnimatedHeader>
-          <AnimatedHeader className={""}>
-            <p className="text-xl leading-relaxed pt-5 text-center max-w-[34.375rem]">
-              Traditional search engines often fall short, leading to
-              frustration and lost opportunities. That&apos;s where AI-powered
-              on-site search comes in.
-            </p>
-          </AnimatedHeader>
+          <div>
+            <div className="w-full absolute left-[50rem] top-[15rem] min-h-96  ">
+              <BackgroundGridImage className="w-full h-full opacity-60" />
+            </div>
+            <div className="sm:w-[33.75rem] mx-auto  flex flex-col items-center   ">
+              <div className="flex justify-center pb-5">
+                <div className="tag ">Our Features</div>
+              </div>
+              <AnimatedHeader className="">
+                <h2
+                  className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text
+  [-webkit-background-clip:text]  lg:w-[55rem] mt-10 lg:leading-tight  "
+                >
+                  <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text animate-pulse mr-2">
+                    ⚡
+                  </span>
+                  Site Search & Boost Conversions with AI
+                </h2>
+              </AnimatedHeader>
+              <AnimatedHeader className="">
+                <p className="text-xl leading-relaxed pt-5 text-center text-white/90 mt-5  w-[45rem]">
+                  Powered by advanced AI technology, our search solution
+                  seamlessly integrates into your website, providing
+                  intelligent, context-aware results tailored to your
+                  users&apos; needs and your business goals.
+                </p>
+              </AnimatedHeader>
+            </div>
+          </div>
+          <div>
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              <div className="absolute inset-0 bg-gradient-radial from-blue-500/10 via-transparent to-transparent pointer-events-none"></div>
+              {featuresData.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-6 relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-30 rounded-lg"></div>
+                  <div className="relative">
+                    <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4 transition-transform duration-300 ease-in-out hover:rotate-12">
+                      <span className="text-2xl">{feature.icon}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-white/80">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className=" min-w-full  py-10">
-          <StickyScroll content={content} contentClassName="" />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
-export default Features;
-
-const content = [
-  {
-    title: "Boosted Click-Through Rates",
-    description:
-      "Our AI search dramatically increases click-through rates by delivering more relevant results. Users find exactly what they're looking for, leading to more engagement and conversions.",
-    content: (
-      <Image
-        src={BarChartImage}
-        alt="Icons by Lordicon.com"
-        height={150}
-        width={150}
-      />
-    ),
-  },
-  {
-    title: "Extended Time on Site",
-    description:
-      "With more accurate search results, users spend longer exploring your site. Our AI encourages discovery, keeping visitors engaged and increasing the likelihood of conversion.",
-    content: (
-      <Image
-        src={ClockTimeImage}
-        alt="Icons by Lordicon.com"
-        height={150}
-        width={150}
-      />
-    ),
-  },
-  {
-    title: "Improved Customer Satisfaction",
-    description:
-      "Users love finding what they need quickly and easily. Our AI search enhances the overall user experience, leading to higher customer satisfaction and loyalty.",
-    content:       <Image
-    src={AvatarManImage}
-    alt="Icons by Lordicon.com"
-    height={150}
-    width={150}
-  />
-  },
-  {
-    title: "Increased Sales",
-    description:
-      "By guiding users directly to relevant products or information, our AI search significantly boosts conversion rates and drives more sales for your business.",
-    content: (
-      <Image
-        src={TrolleyImage}
-        alt="Icons by Lordicon.com"
-        height={150}
-        width={150}
-      />
-    ),
-  },
-];
+export default KeyMetrics;

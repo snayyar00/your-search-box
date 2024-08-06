@@ -13,7 +13,6 @@ import { useInView } from "react-intersection-observer";
 import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 import AnimatedCardContainer from "../../components/custom-animations/AnimatedCardContainer";
 
-import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 
 
 const pricingTiers = [
@@ -76,9 +75,7 @@ const Pricing = () => {
       <div className="container relative">
         <StarsBackground className="opacity-70 z-1" />
         <div className="flex flex-col relative">
-        <div className="w-full absolute left-0 -top-[25rem] min-h-96 ">
-          <BackgroundGridImage className="w-full h-full opacity-60" />
-        </div>
+
           <AnimatedHeader
             className="section-header pt-5 from-white to-[#586285] text-transparent bg-clip-text
             [-webkit-background-clip:text] py-5 lg:text-7xl lg:tracking-wide"

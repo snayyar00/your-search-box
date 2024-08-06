@@ -463,13 +463,7 @@ const Hero = () => {
               "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
             )}
           />
-          <div className="flex">
-            <AnimatedGradientText className="text-black bg-white/90  h-12 text-lg">
-              🎉 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-100" />{" "}
-              <span className={cn(``)}>Introductng Magic AI</span>
-              <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-            </AnimatedGradientText>
-          </div>
+
           <div className="text-center mt-5 lg:mt-8">
             <div className="text-center  mx-auto bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]  bg-clip-text text-4xl tracking-tighter  sm:text-5xl text-transparent md:text-6xl lg:text-7xl [-webkit-background-clip:text]">
               <TextGenerateEffect
