@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main className="max-w-7xl min-h-screen mx-auto px-4">
       <Header />
-      <Menu />
+      {/* <Menu /> */}
       <Posts posts={posts} />
     </main>
   );
