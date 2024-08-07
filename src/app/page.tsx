@@ -1,7 +1,6 @@
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import Hero from "./components/Hero";
-// import LogoTicker from "./components/LogoTicker";
 import ProductShowCase from "./components/ProductShowCase";
 import LogoTicker from "./components/LogoTicker";
 import { WhyChooseUs } from "./components/WhyChooseUs";
@@ -16,10 +15,13 @@ import KeyMetrics from "./components/KeyMetrics";
 import Features from "./components/Features";
 import BlogCards from "./components/BlogCards";
 
-export default function Home() {
+
+export default async function Home() {
+
+
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <LogoTicker />
       <OnePlaceForQuestion />
@@ -30,8 +32,8 @@ export default function Home() {
         <Pricing />
         <Testimonials />
         <FYQ />
-        <CallToAction />
         <BlogCards />
+        <CallToAction />
       </TracingBeam>
       <Footer />
     </>

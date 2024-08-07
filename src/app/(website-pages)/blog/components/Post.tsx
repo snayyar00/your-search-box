@@ -13,6 +13,7 @@ import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 const builder = imageUrlBuilder(client);
 
 const Post = ({ post }: { post: SanityDocument }) => {
+  
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Post = ({ post }: { post: SanityDocument }) => {
 
   if (!post) {
     return (
-      <div className="container mx-auto px-4 py-12 text-center text-white">
+      <div className="container mx-auto px-4 py-12 text-center text-white z-50">
         <h1 className="text-4xl font-bold mb-4">Blog post not found</h1>
         <Link href="/blog" className="text-blue-400 hover:underline">
           Return to blog list

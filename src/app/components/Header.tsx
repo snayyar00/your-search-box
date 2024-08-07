@@ -42,8 +42,6 @@ const navData = [
     name: "Contact Us",
     href: "#contact",
   },
-
-
 ];
 
 const mediumScreenNavData = [
@@ -75,7 +73,7 @@ const Header = () => {
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
-            <Link href="#" className="scroll-smooth">
+            <Link href="/" className="scroll-smooth">
               <Image
                 src={RectangularLogo}
                 alt="logo"

@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import RectangularLogo from "@/assets/rectangular-logo.png";
+import Header from "./components/Header";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -62,6 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={cn(lato.className, "antialiased bg-[#14093E]")}>
+        <Header />
         {children}
       </body>
     </html>
