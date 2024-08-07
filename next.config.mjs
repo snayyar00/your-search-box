@@ -5,6 +5,13 @@ const nextConfig = {
       "images.unsplash.com",
       "avatars.githubusercontent.com",
       "randomuser.me",
+      "cdn.sanity.io",
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
     ],
   },
   webpack(config) {
