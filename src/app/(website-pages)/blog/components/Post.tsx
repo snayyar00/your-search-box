@@ -13,7 +13,6 @@ import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 const builder = imageUrlBuilder(client);
 
 const Post = ({ post }: { post: SanityDocument }) => {
-  
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -32,8 +31,8 @@ const Post = ({ post }: { post: SanityDocument }) => {
   }
 
   return (
-    <section className="py-12 md:py-24 text-white relative overflow-clip">
-      <div className="container mx-auto px-4">
+    <main className="py-12 md:py-24 text-white relative overflow-clip">
+      <div className="container mx-auto px-4  prose prose-xl text-gray-200 prose-">
         {/* Background grid */}
         <div className="w-full absolute left-0 -top-[25rem] min-h-96 opacity-60 z-0">
           <BackgroundGridImage className="w-full h-full" />
@@ -44,7 +43,7 @@ const Post = ({ post }: { post: SanityDocument }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text text-4xl font-bold mb-8 text-center max-w-2xl  mx-auto ">
+          <h1 className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text text-4xl font-bold mb-8 text-center max-w-2xl  mx-auto  ">
             {post.title}
           </h1>
           <div className="flex flex-col items-center justify-center  gap-10">
@@ -66,15 +65,16 @@ const Post = ({ post }: { post: SanityDocument }) => {
                 />
               ) : null}
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg text-white/80 mb-8 leading-relaxed max-w-5xl"
-            >
-              {post?.body ? <PortableText value={post.body} /> : null}
-            </motion.div>
+            {post?.body ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg text-[#C6C1B9] mb-8 leading-relaxed max-w-5xl"
+              >
+                <PortableText value={post.body} />
+              </motion.div>
+            ) : null}
           </div>
           <Link
             href="/blog"
@@ -84,7 +84,7 @@ const Post = ({ post }: { post: SanityDocument }) => {
           </Link>
         </motion.div>
       </div>
-    </section>
+    </main>
   );
 };
 

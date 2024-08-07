@@ -153,6 +153,15 @@ const config = {
         shimmer: "shimmer 2s linear infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
       },
+      typography: (theme: (arg0: string) => any) => ({
+        DEFAULT: {
+          css: {
+            "h1, h2, h3, h4": {
+              color: "#C6C1B9", // Set heading color to #C6C1B9
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [
