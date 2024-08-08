@@ -5,6 +5,9 @@ import Posts from "./components/Posts";
 import Menu from "./components/Menu";
 import Header from "./components/Header";
 
+export const revalidate = 60;
+
+
 export default async function Home() {
   const posts = await sanityFetch<SanityDocument[]>({ query: postsQuery });
 
