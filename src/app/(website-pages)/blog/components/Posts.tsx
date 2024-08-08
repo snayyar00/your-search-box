@@ -24,7 +24,7 @@ const Posts = ({ posts = [] }: { posts: SanityDocument[] }) => {
               key={post._id}
               href={`/blog/${post.slug.current}`}
             >
-              <div className="inline-flex">
+              <div className="inline-flex p-2">
                 <div className="p-6">
                   <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text">
                     {post.title}
@@ -35,7 +35,7 @@ const Posts = ({ posts = [] }: { posts: SanityDocument[] }) => {
                 </div>
                 {post?.mainImage && (
                   <Image
-                    className="w-full h-48 object-cover"
+                    className="max-w-[35%] h-48 object-cover"
                     src={post.imageURL}
                     alt={post.mainImage.alt}
                     width={400}

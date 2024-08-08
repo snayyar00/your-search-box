@@ -75,7 +75,7 @@ export function WhyChooseUs() {
                   <Image
                     src={DashboardImge}
                     alt={"dashboard-image"}
-                    className="rounded-lg invert transition-all duration-700 ease-in-out mt-[2rem]"
+                    className="rounded-lg  transition-all duration-700 ease-in-out mt-[2rem]"
                   />
                 </div>
               </div>
