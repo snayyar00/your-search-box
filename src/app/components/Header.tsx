@@ -20,7 +20,7 @@ const navData = [
   {
     id: 2,
     name: "Showcase",
-    href: "#showcase",
+    href: "/showcase",
   },
   {
     id: 3,

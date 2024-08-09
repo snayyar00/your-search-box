@@ -14,11 +14,9 @@ import OnePlaceForQuestion from "./components/OnePlaceForQuestion";
 import KeyMetrics from "./components/KeyMetrics";
 import Features from "./components/Features";
 import BlogCards from "./components/BlogCards";
-
+import CreatePostsButton from "./components/CreatePostButton";
 
 export default async function Home() {
-
-
   return (
     <>
       {/* <Header /> */}
@@ -33,6 +31,7 @@ export default async function Home() {
         <Testimonials />
         <FYQ />
         <BlogCards />
+        <CreatePostsButton />
         <CallToAction />
       </TracingBeam>
       <Footer />

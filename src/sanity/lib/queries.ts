@@ -10,6 +10,14 @@ export const postsQuery = groq`*[_type == "post"] {
   "authorName": author->name,
 }`;
 
+// Get all showcase
+export const showcasesQuery = groq`*[_type == "showcase"] {
+  _id,
+  date,
+  baselink,
+  _updatedAt
+}`;
+
 // Get a single post by its slug
 export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{ 
     title, description, mainImage, body
@@ -19,3 +27,13 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
     "params": { "slug": slug.current }
   }`;
+
+// Get a single showcase post by its id
+export const showcaseQuery = groq`*[_type == "showcase" && _id == _id][0]{ 
+  baselink, date, _updatedAt, questions
+}`;
+
+// Get all showcase id
+export const showcasePathsQuery = groq`*[_type == "showcase" && defined(_id)][]{
+  "params": { "slug": _id }
+}`;
