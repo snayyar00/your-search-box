@@ -14,6 +14,7 @@ export const postsQuery = groq`*[_type == "post"] {
 export const showcasesQuery = groq`*[_type == "showcase"] {
   _id,
   date,
+  slug,
   baselink,
   _updatedAt
 }`;
@@ -28,12 +29,11 @@ export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]
     "params": { "slug": slug.current }
   }`;
 
-// Get a single showcase post by its id
-export const showcaseQuery = groq`*[_type == "showcase" && _id == _id][0]{ 
-  baselink, date, _updatedAt, questions
-}`;
+  export const showcaseQuery = groq`*[_type == "showcase" && slug.current == $slug][0]{ 
+    baselink, date, _updatedAt, questions
+  }`;
 
-// Get all showcase id
-export const showcasePathsQuery = groq`*[_type == "showcase" && defined(_id)][]{
-  "params": { "slug": _id }
+// Get all showcase slug
+export const showcasePathsQuery = groq`*[_type == "showcase" && defined(slug.current)][]{
+  "params": { "slug": slug.current }
 }`;

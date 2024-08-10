@@ -1,11 +1,8 @@
-
-
 import TrolleyImage from "@/assets/features-images/trolley.gif";
 import ClockTimeImage from "@/assets/features-images/clock-time.gif";
 import BarChartImage from "@/assets/features-images/bar-chart.gif";
 import AvatarManImage from "@/assets/features-images/avatar-man.gif";
 
-;
 import Image from "next/image";
 import React from "react";
 
@@ -16,13 +13,12 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 
-
 const KeyMetrics = () => {
   return (
     <section
       className="py-16 md:py-24 text-white bg-gradient-to-b from-[#14093E] overflow-clip "
       id="features"
-            aria-label="Key Metrics Section"
+      aria-label="Key Metrics Section"
     >
       <Spotlight
         className="top-[-304px] left-[32px] opacity-25 md:top-[-192px] md:left-[288px] lg:opacity-10"

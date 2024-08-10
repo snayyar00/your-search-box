@@ -5,7 +5,7 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <div className="relative" id="contact-us">
+    <div className="relative w-full" id="contact-us">
       <BackgroundBeams />
       <div className="h-[40rem] w-full rounded-md bg-gradient-to-b from-[#f2f2] to-[#14093E] relative flex flex-col items-center justify-center antialiased ">
         <div className="max-w-2xl mx-auto p-4 ">
