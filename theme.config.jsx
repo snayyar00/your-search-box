@@ -1,0 +1,33 @@
+import Image from "next/image";
+export default {
+  logo: (
+    <span>Your Search Box</span>
+    // <Image
+    //   src={"/src/assets/rectangular-logo"}
+    //   alt="your-searchbox-logo"
+    //   width={200}
+    //   height={200}
+    //   className="bg-red-400"
+    // />
+  ),
+  project: {
+    link: "https://github.com/",
+  },
+  // ... other theme options
+  defaultMenuCollapseLevel: 1,
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Search Box" />
+      <meta property="og:description" content="Smart Search Box" />
+    </>
+  ),
+  banner: {
+    key: "2.0-release",
+    text: (
+      <a href="https://yoursearchbox.com" target="_blank">
+        🎉 SearchBox 2.0 is released. Read more →
+      </a>
+    ),
+  },
+};

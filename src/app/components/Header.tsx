@@ -22,7 +22,7 @@ const navData = [
   {
     id: 1,
     name: "Docs",
-    href: "#docs",
+    href: "/docs/getting-started",
   },
   {
     id: 2,
@@ -36,8 +36,8 @@ const navData = [
   },
   {
     id: 4,
-    name: "About Us",
-    href: "/",
+    name: "Team",
+    href: "/team",
   },
   {
     id: 5,
@@ -78,40 +78,22 @@ const subTriggerData = [
   {
     id: 1,
     name: "Shopify",
-    href: "/shopify",
+    href: "/docs/shopify/chatButton",
   },
   {
     id: 2,
     name: "WordPress",
-    href: "/wordpress",
+    href: "/docs/wordpress/chatButton",
   },
   {
     id: 3,
     name: "Wix",
-    href: "/wix",
+    href: "/docs/wix/chatButton",
   },
   {
     id: 4,
     name: "Ecommerce",
-    href: "/ecommerce",
-  },
-];
-
-const subTriggerTeamData = [
-  {
-    id: 1,
-    name: "Member 1",
-    href: "/member1",
-  },
-  {
-    id: 2,
-    name: "Member 2",
-    href: "/member2",
-  },
-  {
-    id: 3,
-    name: "Member 3",
-    href: "/member3",
+    href: "/docs/ecommerce/chatButton",
   },
 ];
 
@@ -136,7 +118,7 @@ const Header = () => {
                     name === "Product" ? (
                       <MenubarMenu key={id}>
                         <MenubarTrigger className=" hover:bg-[#14093E] data-[state=open]:bg-[#14093E] focus:bg-[#14093E] space-x-1 flex items-baseline gap-1 data-[state=open]:text-white/90 focus:text-white/90 hover:text-blue-700 ">
-                          <span>Product</span>
+                          <span className="text-base">Product</span>
                           <span className="h-4">
                             <ChevronDown />
                           </span>
@@ -163,36 +145,6 @@ const Header = () => {
                           </MenubarSub>
                           <MenubarItem>
                             <Link href="#pricing">Pricing</Link>
-                          </MenubarItem>
-                        </MenubarContent>
-                      </MenubarMenu>
-                    ) : name === "About Us" ? (
-                      <MenubarMenu key={id}>
-                        <MenubarTrigger className=" hover:bg-[#14093E] data-[state=open]:bg-[#14093E] focus:bg-[#14093E] space-x-1 flex items-baseline gap-1 data-[state=open]:text-white/90 focus:text-white/90 hover:text-blue-700 ">
-                          <span>About Us</span>
-                          <span className="h-4">
-                            <ChevronDown />
-                          </span>
-                        </MenubarTrigger>
-                        <MenubarContent className="text-white/90 bg-[#14093E] border-[#f2f2] flex flex-col gap-1 py-1 ">
-                          <MenubarSub>
-                            <MenubarSubTrigger>
-                              {" "}
-                              <Link href="#platform">Our Team</Link>
-                            </MenubarSubTrigger>
-                            <MenubarSubContent className="bg-[#14093E]  text-white/90 flex flex-col gap-1 py-1 ml-2  border-[#f2f2]">
-                              {subTriggerTeamData.map(({ id, name, href }) => (
-                                <div key={id}>
-                                  <MenubarItem>
-                                    <Link href={href}>{name}</Link>
-                                  </MenubarItem>
-                                </div>
-                              ))}
-                              {/*  */}
-                            </MenubarSubContent>
-                          </MenubarSub>
-                          <MenubarItem>
-                            <Link href="/privacyPolicy">Privacy Policy</Link>
                           </MenubarItem>
                         </MenubarContent>
                       </MenubarMenu>

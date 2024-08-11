@@ -1,0 +1,15 @@
+{
+  "getting-started": "👋  Getting Started",
+  "wordpress": {
+    "title": "WordPress"
+  },
+  "shopify": {
+    "title": "Shopify"
+  },
+  "ecommerce": {
+    "title": "E-Commerce Store"
+  },
+  "wix": {
+    "title": "Wix"
+  }
+}

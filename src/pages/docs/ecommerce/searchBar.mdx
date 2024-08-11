@@ -1,0 +1,104 @@
+---
+title: "Add AI Search to your E-commerce Store"
+description: "Learn how to integrate AI-powered search into your e-commerce website."
+---
+
+# Add AI Search to your E-commerce Store
+
+## Why AI Search for E-commerce
+
+AI-powered search can significantly enhance the shopping experience on your e-commerce site by providing more accurate and relevant product results, understanding natural language queries, and even offering personalized recommendations.
+
+## Get an API key
+
+1. Go to the **yoursearchbox Dashboard**
+2. Select your project under **Projects**
+3. Go to the **Integrations** tab
+4. Click on **Create integration**
+5. Select **E-commerce**
+6. Provide a **Name** and **Store URL** for the integration
+7. Click on **Create**
+8. Click the **Example < />** button to get your API key and view suggested settings
+
+## Add the Search Widget to Your Store
+
+The method to add the search widget may vary depending on your e-commerce platform. Here's a general approach:
+
+1. Access your e-commerce platform's admin panel
+2. Navigate to the theme editor or custom code section
+3. Locate the area where you want to add the search bar (usually in the header)
+4. Add a container for the search widget
+
+Example:
+
+![WordPress Dashboard Layout](/e-commerce-search-bar-container.png)
+
+
+## Initialize the widget
+
+Next, under the **Tools** tab open **Head & Footer Code** option. Add the code below to the **HEAD Code** section:
+
+
+
+```html copy
+<script
+  id="yoursearchbar-script"
+  src="https://unpkg.com/@yoursearchbar/uikit-js@0.3.7/dist/embed.js"
+  type="module"
+  defer
+></script>
+
+<script defer>
+  const yoursearchbarScript = document.getElementById("yoursearchbar-script");
+
+  // configure and initialize the widget
+  const addyoursearchbarWidget = () => {
+    const yoursearchbarWidget = yoursearchbar().embed({
+      componentType: "SearchBar",
+      targetElement: document.getElementById("yoursearchbar"),
+      properties: {
+        baseSettings: {
+          apiKey: "yoursearchbar_API_KEY", // required
+          integrationId: "yoursearchbar_INTEGRATION_ID", // required
+          organizationId: "yoursearchbar_ORGANIZATION_ID", // required
+          primaryBrandColor: "#26D6FF", // your brand color, widget color scheme is derived from this
+          organizationDisplayName: "yoursearchbar",
+          // ...optional settings
+          theme: {
+            stylesheetUrls: ["/path/to/stylesheets"], // optional
+            // ...optional settings
+          },
+        },
+        modalSettings: {
+          // optional settings
+        },
+        searchSettings: {
+          // optional settings
+        },
+        aiChatSettings: {
+          // optional settings
+          botAvatarSrcUrl: "https://mydomain.com/mylogo", // use your own bot avatar
+          quickQuestions: [
+            "Example question 1?",
+            "Example question 2?",
+            "Example question 3?",
+          ],
+        },
+      },
+    });
+  };
+
+  yoursearchbarScript.addEventListener("load", () => {
+    if (document.body) addyoursearchbarWidget(); // initialize the widget
+  });
+</script>
+```
+
+​
+
+## Save Custom Code
+
+1. Click on the "Save Changes" button.
+2. Navigate to your web application to ensure the widget is installed correctly.
+
+For a full list of customizations, please refer to the [Chat Button documentation](/docs/chat-button).

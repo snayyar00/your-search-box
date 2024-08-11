@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 import { cn } from "@/lib/utils";
 import RectangularLogo from "@/assets/rectangular-logo.png";
 import Header from "./components/Header";
