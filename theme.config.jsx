@@ -11,7 +11,7 @@ export default {
     // />
   ),
   project: {
-    link: "https://github.com/",
+    link: "https://yoursearchbox.com/",
   },
   // ... other theme options
   defaultMenuCollapseLevel: 1,
@@ -30,4 +30,14 @@ export default {
       </a>
     ),
   },
+  footer: {
+    text: (
+      <span>
+        MIT {new Date().getFullYear()} ©{' '}
+        <a href="https://yoursearchbox.com" target="_blank">
+          Your Search Box
+        </a>
+        .
+      </span>
+    )
 };
