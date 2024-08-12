@@ -153,7 +153,7 @@ const Pricing = () => {
                           className="text-base flex items-center gap-4 "
                         >
                           <span>
-                            <CheckIcon className="w-6 h-6" />
+                            <CheckIcon className="w-6 h-6 hidden sm:block" />
                           </span>
                           <span>{feature}</span>
                         </li>
