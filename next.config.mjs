@@ -1,4 +1,4 @@
-import nextra from 'nextra'
+import nextra from "nextra";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -15,7 +15,11 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
       },
     ],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ["image/webp"],
   },
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -46,8 +50,8 @@ const nextConfig = {
 };
 
 const withNextra = nextra({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx'
-})
+  theme: "nextra-theme-docs",
+  themeConfig: "./theme.config.jsx",
+});
 
 export default withNextra(nextConfig);

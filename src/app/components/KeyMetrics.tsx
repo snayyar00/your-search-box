@@ -79,6 +79,9 @@ const content = [
         alt="Icons by Lordicon.com"
         height={150}
         width={150}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />
     ),
   },
@@ -92,6 +95,9 @@ const content = [
         alt="Icons by Lordicon.com"
         height={150}
         width={150}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />
     ),
   },
@@ -105,6 +111,9 @@ const content = [
         alt="Icons by Lordicon.com"
         height={150}
         width={150}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />
     ),
   },

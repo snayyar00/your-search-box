@@ -100,11 +100,11 @@ const TestimonialsColumn = (props: {
       {[...new Array(2)].fill(0).map((_, index) => (
         <React.Fragment key={index}>
           {props.testimonial.map(({ name, imageSrc, text, username }) => (
-            <div className="card bg-[#9891b0]  shadow-sm " key={username}>
-              <p className="leading-[25px] font-medium text-base text-black/90 mt-5">
+            <div className="card bg-[#6c6486] shadow-sm" key={username}>
+              <p className="leading-[25px] font-medium text-base text-white mt-5">
                 {text}
               </p>
-              <div className="flex gap-5 items-center mt-5 ">
+              <div className="flex gap-5 items-center mt-5">
                 <Image
                   src={imageSrc}
                   alt="testimonial profile image"
@@ -113,10 +113,10 @@ const TestimonialsColumn = (props: {
                   className="h-10 w-10 rounded-full"
                 />
                 <div className="flex flex-col gap-1">
-                  <h2 className="font-medium tracking-tight leading-5">
+                  <h2 className="font-medium tracking-tight leading-5 text-white">
                     {name}
                   </h2>
-                  <p className="leading-5 tracking-tight">{username}</p>
+                  <p className="leading-5 tracking-tight text-gray-200">{username}</p>
                 </div>
               </div>
             </div>

@@ -62,9 +62,9 @@ export function WhyChooseUs() {
               {/* First row - full width */}
               <div className="col-span-1 md:col-span-2 bg-white/5 backdrop-blur-sm rounded-lg p-8 transition-all duration-700 ease-in-out hover:shadow-lg overflow-hidden group relative h-[50rem]">
                 <div className="flex flex-col transition-all duration-700 ease-in-out transform group-hover:-translate-y-full gap-4">
-                  <h3 className="text-2xl font-semibold  text-white">
+                  <h2 className="text-2xl font-semibold  text-white">
                     AI-Powered Precision
-                  </h3>
+                  </h2>
                   <p className="text-white/80  transition-all duration-700 ease-in-out w-[55rem] group-hover:mb-[2rem] ">
                     Experience unparalleled search accuracy with our AI that
                     learns and adapts to your website&apos;s content, providing

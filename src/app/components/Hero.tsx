@@ -1,7 +1,6 @@
 "use client";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
 import React, { useRef } from "react";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -30,7 +29,7 @@ const Hero = () => {
       <section className="py-16  text-white text-center md:py-24  relative overflow-x-clip">
         <div className="absolute h-[70rem] w-[73rem] -translate-x-1/2 left-1/2 -top-[1rem] -z-10 opacity-90"></div>
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="-top-40 left-0 md:left-60 md:-top-20 hidden sm:block"
           fill="white"
         />
         <div className="container  md:max-w-2xl lg:max-w-4xl">
@@ -42,11 +41,17 @@ const Hero = () => {
 
           <div className="text-center mt-5 lg:mt-8">
             <div className="text-center  mx-auto bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]  bg-clip-text text-4xl tracking-tighter  sm:text-5xl text-transparent md:text-6xl lg:text-7xl [-webkit-background-clip:text]">
-              <TextGenerateEffect
+              {/* <TextGenerateEffect
                 words=" Unlock the power of AI with our"
                 className="text-white"
-              />
-              <div className="opacity-0 animate-[fadeIn_1s_ease-in_5.2s_forwards]">
+              /> */}
+              <div className="opacity-0 animate-[fadeIn_1s_ease-in_2.2s_forwards]">
+                <h1
+                  className="section-header bg-gradient-to-b from-white/90 to-[#586285] text-transparent bg-clip-text
+  [-webkit-background-clip:text]  lg:w-[50rem] mt-10 lg:leading-tight  "
+                >
+                  Unlock the power of AI with our
+                </h1>
                 <SparklesText
                   text="On-Site Search"
                   className="font-semibold tracking-normal text-blue-400 inline-flex "

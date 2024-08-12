@@ -16,9 +16,9 @@ export const AccordionItem = ({ id, question, answer }: accordionProps) => {
     return (
       <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
         <div className="flex  items-center py-7 border-b border-gray-400">
-          <h4 className="text-lg font-bold flex-1  -tracking-tight">
+          <h3 className="text-lg font-bold flex-1  -tracking-tight">
             {question}
-          </h4>
+          </h3>
           <span>
             {isOpen ? (
               <MinusCircleIcon className="h-6 w-6" />

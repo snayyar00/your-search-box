@@ -16,40 +16,47 @@ const Footer = () => {
         </div>
         <ul className="flex flex-col gap-5 items-center mt-5 justify-center md:flex-row">
           <li>
-            <Link href="#">About</Link>
+            <Link href="/policies/privacy-policy" className="relative group">
+              <span className="inline-block">Privacy Policy</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
 
           <li>
-            <Link href="#">Features</Link>
+            <Link
+              href="/policies/terms-and-conditions"
+              className="relative group"
+            >
+              <span className="inline-block">Terms of Services</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
 
           <li>
-            <Link href="#">Customers</Link>
+            <Link href="#pricing" className="relative group">
+              <span className="inline-block">Pricing</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
 
           <li>
-            <Link href="#">Pricing</Link>
-          </li>
-
-          <li>
-            <Link href="#">Help</Link>
-          </li>
-
-          <li>
-            <Link href="#">Careers</Link>
+            <Link href="/contact" className="relative group">
+              <span className="inline-block">Contact us</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
         </ul>
         <div className="flex  items-center justify-center gap-5 mt-10">
-          <Link href="#">
+          <Link href="#" aria-label="x-social-icon">
             <Xsocial className="h-15" />
           </Link>
-          <Link href="#">
+          <Link href="#" aria-label="Instagram-social-icon">
             <Insta className="h-15" />
           </Link>
-          <Link href="#">
+          <Link href="#" aria-label="LinkedIn-social-icon">
             <Linkedin className="h-15" />
           </Link>
-          <Link href="#">
+          <Link href="#" aria-label="youtube-social-icon">
             <Youtube className="h-15" />
           </Link>
         </div>

@@ -40,7 +40,7 @@ const Posts = ({ posts = [] }: { posts: SanityDocument[] }) => {
                     alt={post.mainImage.alt}
                     width={400}
                     height={250}
-                    priority
+                    loading="lazy"
                   />
                 )}
               </div>

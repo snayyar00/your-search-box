@@ -84,16 +84,16 @@ const KeyMetrics = () => {
               {featuresData.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-lg p-6 relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-6 relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg z-50"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-30 rounded-lg"></div>
                   <div className="relative">
                     <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4 transition-transform duration-300 ease-in-out hover:rotate-12">
                       <span className="text-2xl">{feature.icon}</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">
+                    <h2 className="text-xl font-semibold mb-2 text-white">
                       {feature.title}
-                    </h3>
+                    </h2>
                     <p className="text-white/80">{feature.description}</p>
                   </div>
                 </div>

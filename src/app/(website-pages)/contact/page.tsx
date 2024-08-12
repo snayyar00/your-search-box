@@ -81,6 +81,9 @@ const ContactUs = () => {
                 alt="Icons by Lordicon.com Illustration"
                 width={230}
                 height={230}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
             </div>
           </motion.div>
@@ -103,6 +106,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded bg-[#1F1147] border border-[#3D2F6F] focus:outline-none focus:border-blue-500 transition duration-300"
+                  aria-label="name"
                 />
               </div>
               <div>
@@ -117,6 +121,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded bg-[#1F1147] border border-[#3D2F6F] focus:outline-none focus:border-blue-500 transition duration-300"
+                  aria-label="email"
                 />
               </div>
               <div>

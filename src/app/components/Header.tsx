@@ -113,7 +113,10 @@ const Header = () => {
 
             <nav className="md:flex  md:justify-between md:items-center md:gap-16">
               <div className="hidden lg:flex items-center gap-6 text-white/90">
-                <Menubar className="border-none bg-transparent flex gap-2 ">
+                <Menubar
+                  className="border-none bg-transparent flex gap-2 "
+                  role="menubar"
+                >
                   {navData.map(({ href, id, name }) =>
                     name === "Product" ? (
                       <MenubarMenu key={id}>
@@ -149,7 +152,12 @@ const Header = () => {
                         </MenubarContent>
                       </MenubarMenu>
                     ) : (
-                      <Link key={id} href={href} className="hover:border-b">
+                      <Link
+                        key={id}
+                        href={href}
+                        className="hover:border-b"
+                        role="menuitem"
+                      >
                         {name}
                       </Link>
                     )
@@ -164,7 +172,7 @@ const Header = () => {
                 >
                   <Button
                     variant="demoButton"
-                    className=" text-center uppercase w-[7rem] md:w-auto  text-[11px] text-wrap "
+                    className="hidden sm:block text-center uppercase w-[7rem] md:w-auto  text-[11px] text-wrap "
                   >
                     Request a demo
                   </Button>

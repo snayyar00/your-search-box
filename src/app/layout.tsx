@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth font-">
       <body className={cn(lato.className, "antialiased bg-[#14093E]")}>
         <Header />
         {children}

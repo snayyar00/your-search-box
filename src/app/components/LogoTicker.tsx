@@ -71,15 +71,21 @@ const LogoTicker = () => {
                 key={id}
                 src={src}
                 alt="logo img"
+                width={100}
+                height={50}
                 className="logo-ticker-image "
+                loading="lazy"
               />
             ))}
             {logoData.map(({ id, src }) => (
               <Image
                 key={id}
                 src={src}
+                width={100}
+                height={50}
                 alt="logo img"
                 className="logo-ticker-image "
+                loading="lazy"
               />
             ))}
           </motion.div>
