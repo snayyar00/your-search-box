@@ -89,126 +89,81 @@ export function WhyChooseUs() {
                   Effortlessly integrate your-search-box into your website with
                   minimal setup, enhancing user experience instantly.
                 </p>
-                <svg
-                  className="w-full h-48"
-                  viewBox="0 0 200 100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Monitor */}
-                  <rect
-                    x="10"
-                    y="5"
-                    width="180"
-                    height="90"
-                    rx="5"
-                    fill="#333"
-                  />
-                  <rect
-                    x="15"
-                    y="10"
-                    width="170"
-                    height="75"
-                    rx="2"
-                    fill="#fff"
-                  />
-
-                  {/* Website */}
-                  <rect x="20" y="15" width="160" height="65" fill="#f0f0f0" />
-
-                  {/* Search bar */}
-                  <rect
-                    x="30"
-                    y="20"
-                    width="140"
-                    height="10"
-                    rx="5"
-                    fill="#e0e0e0"
-                  />
-                  <circle cx="160" cy="25" r="3" fill="#22D3EE">
-                    <animate
-                      attributeName="fill"
-                      values="#22D3EE;#4F46E5;#22D3EE"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-
-                  {/* Grid of items */}
-                  <rect x="30" y="35" width="30" height="30" fill="#ddd" />
-                  <rect x="65" y="35" width="30" height="30" fill="#ddd" />
-                  <rect x="100" y="35" width="30" height="30" fill="#ddd" />
-                  <rect x="135" y="35" width="30" height="30" fill="#ddd" />
-
-                  <rect x="30" y="70" width="30" height="5" fill="#bbb" />
-                  <rect x="65" y="70" width="30" height="5" fill="#bbb" />
-                  <rect x="100" y="70" width="30" height="5" fill="#bbb" />
-                  <rect x="135" y="70" width="30" height="5" fill="#bbb" />
-
-                  {/* Animation for items */}
-                  <rect
-                    x="30"
-                    y="35"
-                    width="30"
-                    height="30"
-                    fill="#22D3EE"
-                    opacity="0"
+                <div className="relative w-full h-48">
+                  <svg
+                    className="w-full h-full"
+                    viewBox="0 0 200 100"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <animate
-                      attributeName="opacity"
-                      values="0;0.3;0"
-                      dur="3s"
-                      repeatCount="indefinite"
+                    {/* Monitor */}
+                    <rect
+                      x="10"
+                      y="5"
+                      width="180"
+                      height="90"
+                      rx="5"
+                      fill="#333"
                     />
-                  </rect>
-                  <rect
-                    x="65"
-                    y="35"
-                    width="30"
-                    height="30"
-                    fill="#22D3EE"
-                    opacity="0"
-                  >
-                    <animate
-                      attributeName="opacity"
-                      values="0;0.3;0"
-                      dur="3s"
-                      begin="1s"
-                      repeatCount="indefinite"
+                    <rect
+                      x="15"
+                      y="10"
+                      width="170"
+                      height="75"
+                      rx="2"
+                      fill="#fff"
                     />
-                  </rect>
-                  <rect
-                    x="100"
-                    y="35"
-                    width="30"
-                    height="30"
-                    fill="#22D3EE"
-                    opacity="0"
-                  >
-                    <animate
-                      attributeName="opacity"
-                      values="0;0.3;0"
-                      dur="3s"
-                      begin="2s"
-                      repeatCount="indefinite"
+
+                    {/* Website */}
+                    <rect x="20" y="15" width="160" height="65" fill="#f0f0f0" />
+
+                    {/* Search bar */}
+                    <rect
+                      x="30"
+                      y="20"
+                      width="140"
+                      height="10"
+                      rx="5"
+                      fill="#e0e0e0"
                     />
-                  </rect>
-                  <rect
-                    x="135"
-                    y="35"
-                    width="30"
-                    height="30"
-                    fill="#22D3EE"
-                    opacity="0"
-                  >
-                    <animate
-                      attributeName="opacity"
-                      values="0;0.3;0"
-                      dur="3s"
-                      begin="0.5s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                </svg>
+                    <circle cx="160" cy="25" r="3" className="search-icon" />
+
+                    {/* Grid of items */}
+                    <rect x="30" y="35" width="30" height="30" fill="#ddd" className="grid-item item1" />
+                    <rect x="65" y="35" width="30" height="30" fill="#ddd" className="grid-item item2" />
+                    <rect x="100" y="35" width="30" height="30" fill="#ddd" className="grid-item item3" />
+                    <rect x="135" y="35" width="30" height="30" fill="#ddd" className="grid-item item4" />
+
+                    <rect x="30" y="70" width="30" height="5" fill="#bbb" />
+                    <rect x="65" y="70" width="30" height="5" fill="#bbb" />
+                    <rect x="100" y="70" width="30" height="5" fill="#bbb" />
+                    <rect x="135" y="70" width="30" height="5" fill="#bbb" />
+                  </svg>
+                </div>
+                <style jsx>{`
+                  @keyframes searchIconColor {
+                    0%, 100% { fill: #22D3EE; }
+                    50% { fill: #4F46E5; }
+                  }
+                  
+                  @keyframes gridItemHighlight {
+                    0%, 100% { fill-opacity: 0; }
+                    50% { fill-opacity: 0.3; }
+                  }
+                  
+                  .search-icon {
+                    animation: searchIconColor 2s infinite;
+                  }
+                  
+                  .grid-item {
+                    fill: #22D3EE;
+                    fill-opacity: 0;
+                  }
+                  
+                  .item1 { animation: gridItemHighlight 3s infinite; }
+                  .item2 { animation: gridItemHighlight 3s infinite 1s; }
+                  .item3 { animation: gridItemHighlight 3s infinite 2s; }
+                  .item4 { animation: gridItemHighlight 3s infinite 0.5s; }
+                `}</style>
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg overflow-hidden">

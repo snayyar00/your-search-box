@@ -8,8 +8,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 import AnimatedHeader from "../../components/custom-animations/AnimatedHeader";
 import AnimatedCardContainer from "../../components/custom-animations/AnimatedCardContainer";
 

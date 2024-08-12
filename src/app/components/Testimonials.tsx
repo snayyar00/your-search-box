@@ -11,7 +11,6 @@ import avatar7 from "@/assets/testimonials/avatar-7.png";
 import avatar8 from "@/assets/testimonials/avatar-8.png";
 import avatar9 from "@/assets/testimonials/avatar-9.png";
 import Image from "next/image";
-import { twMerge } from "tailwind-merge";
 
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
 

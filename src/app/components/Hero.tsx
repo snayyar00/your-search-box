@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import React, { useRef } from "react";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { Spotlight } from "@/components/ui/spotlight";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-
 import SparklesText from "@/components/magicui/sparkles-text";
 
 const changeingText = ["heello", "hi", "nay", "hsi", "als"];
@@ -50,12 +48,15 @@ const Hero = () => {
                   className="section-header bg-gradient-to-b from-white/90 to-[#586285] text-transparent bg-clip-text
   [-webkit-background-clip:text]  lg:w-[50rem] mt-10 lg:leading-tight  "
                 >
-                  Unlock the power of AI with our
+                  Unlock the power of AI with our <br />
+                  <span className="font-semibold tracking-normal text-blue-400 inline-flex ">
+                    On-Site Search
+                  </span>
                 </h1>
-                <SparklesText
+                {/* <SparklesText
                   text="On-Site Search"
                   className="font-semibold tracking-normal text-blue-400 inline-flex "
-                />
+                /> */}
               </div>
             </div>
           </div>
