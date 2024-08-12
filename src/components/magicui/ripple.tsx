@@ -12,7 +12,7 @@ const Ripple = React.memo(function Ripple({
   numCircles = 8,
 }: RippleProps) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+    <div className="absolute inset-0 flex items-center justify-center bg-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)] border border-black/20 mt-10 rounded-full">
       {Array.from({ length: numCircles }, (_, i) => {
         const size = mainCircleSize + i * 70;
         const opacity = mainCircleOpacity - i * 0.03;

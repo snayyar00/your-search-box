@@ -27,31 +27,43 @@ const OnePlaceForQuestion = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-[#f2f2f2] to-[#efefe3] min-w-full py-16 md:py-24" role="main">
+    <div
+      className="text-white bg-gradient-to-b from-[#14093E] to-[#f2f2] min-w-full py-16 md:py-24 text-center"
+      role="main"
+    >
       <div className="container realtive">
         <div className="sm:w-[33.75rem] mx-auto lg:w-[45rem]  lg:leading-tight">
-          <div className="flex justify-center pb-5">
+          <div className="flex justify-center">
             <div className="tag">Level up search</div>
           </div>
           <AnimatedHeader className={""}>
-            <h2 className="section-header">One place for any question</h2>
+            <h2
+              className="section-header bg-gradient-to-b from-white/90 to-[#586285] text-transparent bg-clip-text
+  [-webkit-background-clip:text]  lg:w-[50rem] my-10 lg:leading-slug  "
+            >
+              One place for any question
+            </h2>
           </AnimatedHeader>
           <AnimatedHeader className={""}>
-            <p className="text-xl leading-relaxed pt-5 text-center lg:w-[35rem] mx-auto">
+            <p className="text-xl leading-relaxed mb-10 text-center lg:w-[35rem] mx-auto">
               Answer <strong>user</strong>, <strong>support</strong>, and{" "}
               <strong>sales questions</strong> powered by your own knowledge
               base.
             </p>
           </AnimatedHeader>
         </div>
-  
+
         <AnimatedCardContainer index={1}>
-          <div className="relative flex flex-col items-center justify-center  object-cover py-10 h-[40rem]  ">
+          <div className="relative flex flex-col items-center justify-center  object-cover my-10 h-[40rem] min-w-full invert  rounded-full">
             <div className="hidden lg:block absolute -translate-x-1/2 left-1/2 w-[60rem] z-0">
               <AnimatedBeamShow />
             </div>
 
-            <div className="z-20 bg-gray-300 rounded-full h-[10.5rem] w-[11rem] text-center flex" role="alert" aria-live="polite">
+            <div
+              className="z-20 rounded-full h-[10.5rem] w-[11rem] text-center flex bg-[#C5DAA5]"
+              role="alert"
+              aria-live="polite"
+            >
               <AnimatePresence mode="wait">
                 <motion.p
                   key={currentIndex}
@@ -59,7 +71,7 @@ const OnePlaceForQuestion = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="z-20 whitespace-pre-wrap text-center text-2xl font-medium tracking-tighter text-black max-w-[12rem]  flex items-center justify-center"
+                  className="z-20 whitespace-pre-wrap text-center text-2xl font-medium tracking-tighter text-black max-w-[12rem]  flex items-center justify-center  "
                 >
                   {catchLines[currentIndex]}
                 </motion.p>

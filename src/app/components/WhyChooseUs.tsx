@@ -303,7 +303,7 @@ export function WhyChooseUs() {
                     </div>
                   </div>
                   <div className="md:w-1/3 mt-6 md:mt-0">
-                    <div className="relative w-full h-48 transition-all duration-500 ease-in-out">
+                    <div className="relative sm:w-full mt-5 sm:mt-0  min-w-[18rem] min-h-[8rem] sm:h-48 transition-all duration-500 ease-in-out">
                       {["design", "features", "analytics"].map((type) => (
                         <div
                           key={type}

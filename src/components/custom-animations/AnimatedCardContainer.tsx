@@ -36,6 +36,7 @@ const AnimatedCardContainer = ({
 
   return (
     <motion.div
+    className="rounded-full"
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={controls}

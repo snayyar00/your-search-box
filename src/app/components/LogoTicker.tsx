@@ -41,11 +41,11 @@ const logoData = [
 const LogoTicker = () => {
   return (
     <div
-      className="py-8 md:py-12 mt-10 bg-gradient-to-b from-[#F5F5F5] to-[#F5F5F5]"
+      className="py-8 md:py-12 mt-10 text-white"
       id="partners"
     >
       <div className="container">
-        <h2 className="text-xl text-center text-black">
+        <h2 className="text-xl text-center">
           Trusted by the world&apos;s most innovative teams
         </h2>
         <div
@@ -73,7 +73,7 @@ const LogoTicker = () => {
                 alt="logo img"
                 width={100}
                 height={50}
-                className="logo-ticker-image "
+                className="logo-ticker-image invert"
                 loading="lazy"
               />
             ))}
@@ -84,7 +84,7 @@ const LogoTicker = () => {
                 width={100}
                 height={50}
                 alt="logo img"
-                className="logo-ticker-image "
+                className="logo-ticker-image invert"
                 loading="lazy"
               />
             ))}

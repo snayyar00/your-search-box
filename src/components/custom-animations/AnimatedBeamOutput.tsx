@@ -15,7 +15,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 bg-[#C5DAA5] p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] ",
         className
       )}
     >
@@ -36,7 +36,7 @@ export function AnimatedBeamShow() {
 
   return (
     <div
-      className="flex overflow-hidden relative justify-center items-center p-10 px-10 w-full max-w-full bg-transparent"
+      className="flex overflow-hidden relative justify-center items-center p-10 px-10 w-full max-w-full bg-transparent "
       ref={containerRef}
     >
       <div className="flex flex-col gap-10 justify-between items-stretch w-full h-full ">
@@ -52,16 +52,17 @@ export function AnimatedBeamShow() {
           <Circle ref={div2Ref}>
             <Icons.website />
           </Circle>
-          <Circle
+          <div ref={div4Ref} className="z-0"></div>
+          {/* <Circle
             ref={div4Ref}
-            className="w-16 h-16 bg-page-gradient bg-slate-900 border border-white/20 [box-shadow:0_-20px_80px_-20px_#8686f01f_inset]"
+            className="w-16 h-16 bg-page-gradient bg-slate-900 border border-white/20 [box-shadow:0_-20px_80px_-20px_#8686f01f_inset] "
           >
             <Image
               src={Logo}
               className="text-black w-full h-full"
               alt="logo image"
             />
-          </Circle>
+          </Circle> */}
           <Circle ref={div6Ref}>
             <Icons.code />
           </Circle>
