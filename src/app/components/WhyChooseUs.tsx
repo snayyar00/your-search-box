@@ -10,7 +10,6 @@ import CustomizedSearchBox from "@/assets/features-images/Customize-box.png";
 import SearchBoxBottom from "@/assets/features-images/Search-Box Bottom-Bar.png";
 import DashboardImge from "@/assets/dashboard-layout.png";
 
-
 export function WhyChooseUs() {
   const [activeButton, setActiveButton] = useState("design");
 
@@ -60,22 +59,22 @@ export function WhyChooseUs() {
             {/* Bento grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First row - full width */}
-              <div className="col-span-1 md:col-span-2 bg-white/5 backdrop-blur-sm rounded-lg p-8 transition-all duration-700 ease-in-out hover:shadow-lg overflow-hidden group relative h-[50rem]">
-                <div className="flex flex-col transition-all duration-700 ease-in-out transform group-hover:-translate-y-full gap-4">
-                  <h2 className="text-2xl font-semibold  text-white">
+              <div className="col-span-1 md:col-span-2 bg-white/5 backdrop-blur-sm rounded-lg p-8 transition-all duration-700 ease-in-out hover:shadow-lg overflow-hidden group relative h-auto min-h-[20rem] lg:min-h-[50rem] flex flex-col justify-between">
+                <div className="flex flex-col transition-all duration-700 ease-in-out transform group-hover:-translate-y-full gap-4 z-10">
+                  <h2 className="text-2xl font-semibold text-white">
                     AI-Powered Precision
                   </h2>
-                  <p className="text-white/80  transition-all duration-700 ease-in-out w-[55rem] group-hover:mb-[2rem] ">
+                  <p className="text-white/80 transition-all duration-700 ease-in-out w-full md:w-[55rem] group-hover:mb-[2rem]">
                     Experience unparalleled search accuracy with our AI that
                     learns and adapts to your website&apos;s content, providing
                     visitors with instant, relevant results.
                   </p>
                 </div>
-                <div className="absolute inset-x-0 bottom-0 h-full transition-all duration-700 ease-in-out transform translate-y-1/4 group-hover:translate-y-0 px-[2rem] group-hover:mt-[2rem]">
+                <div className="absolute inset-x-0 bottom-0 h-full transition-all duration-700 ease-in-out transform translate-y-[calc(100%-4rem)] lg:translate-y-[calc(100%-38rem)] group-hover:translate-y-8  px-4 md:px-8 pt-0 ">
                   <Image
                     src={DashboardImge}
-                    alt={"dashboard-image"}
-                    className="rounded-lg  transition-all duration-700 ease-in-out mt-[2rem]"
+                    alt="dashboard-image"
+                    className="rounded-lg transition-all duration-700 ease-in-out w-full h-auto object-cover"
                   />
                 </div>
               </div>
@@ -114,7 +113,13 @@ export function WhyChooseUs() {
                     />
 
                     {/* Website */}
-                    <rect x="20" y="15" width="160" height="65" fill="#f0f0f0" />
+                    <rect
+                      x="20"
+                      y="15"
+                      width="160"
+                      height="65"
+                      fill="#f0f0f0"
+                    />
 
                     {/* Search bar */}
                     <rect
@@ -128,10 +133,38 @@ export function WhyChooseUs() {
                     <circle cx="160" cy="25" r="3" className="search-icon" />
 
                     {/* Grid of items */}
-                    <rect x="30" y="35" width="30" height="30" fill="#ddd" className="grid-item item1" />
-                    <rect x="65" y="35" width="30" height="30" fill="#ddd" className="grid-item item2" />
-                    <rect x="100" y="35" width="30" height="30" fill="#ddd" className="grid-item item3" />
-                    <rect x="135" y="35" width="30" height="30" fill="#ddd" className="grid-item item4" />
+                    <rect
+                      x="30"
+                      y="35"
+                      width="30"
+                      height="30"
+                      fill="#ddd"
+                      className="grid-item item1"
+                    />
+                    <rect
+                      x="65"
+                      y="35"
+                      width="30"
+                      height="30"
+                      fill="#ddd"
+                      className="grid-item item2"
+                    />
+                    <rect
+                      x="100"
+                      y="35"
+                      width="30"
+                      height="30"
+                      fill="#ddd"
+                      className="grid-item item3"
+                    />
+                    <rect
+                      x="135"
+                      y="35"
+                      width="30"
+                      height="30"
+                      fill="#ddd"
+                      className="grid-item item4"
+                    />
 
                     <rect x="30" y="70" width="30" height="5" fill="#bbb" />
                     <rect x="65" y="70" width="30" height="5" fill="#bbb" />
@@ -141,28 +174,46 @@ export function WhyChooseUs() {
                 </div>
                 <style jsx>{`
                   @keyframes searchIconColor {
-                    0%, 100% { fill: #22D3EE; }
-                    50% { fill: #4F46E5; }
+                    0%,
+                    100% {
+                      fill: #22d3ee;
+                    }
+                    50% {
+                      fill: #4f46e5;
+                    }
                   }
-                  
+
                   @keyframes gridItemHighlight {
-                    0%, 100% { fill-opacity: 0; }
-                    50% { fill-opacity: 0.3; }
+                    0%,
+                    100% {
+                      fill-opacity: 0;
+                    }
+                    50% {
+                      fill-opacity: 0.3;
+                    }
                   }
-                  
+
                   .search-icon {
                     animation: searchIconColor 2s infinite;
                   }
-                  
+
                   .grid-item {
-                    fill: #22D3EE;
+                    fill: #22d3ee;
                     fill-opacity: 0;
                   }
-                  
-                  .item1 { animation: gridItemHighlight 3s infinite; }
-                  .item2 { animation: gridItemHighlight 3s infinite 1s; }
-                  .item3 { animation: gridItemHighlight 3s infinite 2s; }
-                  .item4 { animation: gridItemHighlight 3s infinite 0.5s; }
+
+                  .item1 {
+                    animation: gridItemHighlight 3s infinite;
+                  }
+                  .item2 {
+                    animation: gridItemHighlight 3s infinite 1s;
+                  }
+                  .item3 {
+                    animation: gridItemHighlight 3s infinite 2s;
+                  }
+                  .item4 {
+                    animation: gridItemHighlight 3s infinite 0.5s;
+                  }
                 `}</style>
               </div>
 

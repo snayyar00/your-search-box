@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "@/components/ui/spotlight";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function NotFound() {

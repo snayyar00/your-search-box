@@ -49,14 +49,14 @@ const Hero = () => {
   [-webkit-background-clip:text]  lg:w-[50rem] mt-10 lg:leading-tight  "
                 >
                   Unlock the power of AI with our <br />
-                  <span className="font-semibold tracking-normal text-blue-400 inline-flex ">
+                  <span className="font-semibold tracking-normal text-blue-400 inline-flex sm:hidden ">
                     On-Site Search
                   </span>
                 </h1>
-                {/* <SparklesText
+                <SparklesText
                   text="On-Site Search"
-                  className="font-semibold tracking-normal text-blue-400 inline-flex "
-                /> */}
+                  className="font-semibold tracking-normal text-blue-400 sm:inline-flex hidden  "
+                />
               </div>
             </div>
           </div>
