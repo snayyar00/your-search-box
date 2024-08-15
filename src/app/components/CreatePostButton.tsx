@@ -1,6 +1,14 @@
 "use client";
 
+import { useEffect } from "react";
+
 const CreatePostsButton = () => {
+
+  // trigger post request, every time you refresh the page
+  useEffect(() => {
+    handleCreatePosts();
+  }, []);
+
   const handleCreatePosts = async () => {
     const response = await fetch("/api/create-posts", {
       method: "POST",
@@ -13,7 +21,14 @@ const CreatePostsButton = () => {
     }
   };
 
-  return <button onClick={handleCreatePosts} className="bg-gray-500 h-10 px-2 py-3 flex items-center justify-center text-white">Create Posts</button>;
+  return (
+    <button
+      onClick={handleCreatePosts}
+      className="bg-gray-500 h-10 px-2 py-3  items-center justify-center text-white hidden "
+    >
+      Create Posts
+    </button>
+  );
 };
 
 export default CreatePostsButton;
