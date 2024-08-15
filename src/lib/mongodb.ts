@@ -21,26 +21,13 @@ if (process.env.NODE_ENV === 'development') {
   clientPromise = client.connect();
 }
 
-// New function to fetch only new or updated posts from MongoDB
-export async function fetchNewPosts(lastUpdateTime: Date) {
-  await clientPromise;
-  const database = client.db('test');
-  const collection = database.collection('pseowebsiteschemas');
-  const posts = await collection.find({
-    $or: [
-      { createdAt: { $gt: lastUpdateTime } },
-      { updatedAt: { $gt: lastUpdateTime } }
-    ]
-  }).toArray();
+// New function to fetch posts from MongoDB
+export async function fetchPosts() {
+  await clientPromise; // Ensure the client is connected
+  const database = client.db('test'); // Replace with your database name
+  const collection = database.collection('pseowebsiteschemas'); // Replace with your collection name
+  const posts = await collection.find({}).toArray();
   return posts;
 }
-
-// export async function fetchPosts() {
-//   await clientPromise; // Ensure the client is connected
-//   const database = client.db('test'); // Replace with your database name
-//   const collection = database.collection('pseowebsiteschemas'); // Replace with your collection name
-//   const posts = await collection.find({}).toArray();
-//   return posts;
-// }
 
 export default clientPromise;
