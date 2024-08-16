@@ -37,7 +37,6 @@ export default async function Home() {
         <Testimonials />
         <FYQ />
         {/* <BlogCards /> */}
-        <CreatePostsButton />
       </TracingBeam>
       <CallToAction />
       <Footer />

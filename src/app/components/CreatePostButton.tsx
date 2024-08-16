@@ -3,11 +3,12 @@
 import { useEffect } from "react";
 
 const CreatePostsButton = () => {
-
   // trigger post request, every time you refresh the page
-  useEffect(() => {
-    handleCreatePosts();
-  }, []);
+
+  // doesn't work in production, need to manually click button
+  // useEffect(() => {
+  //   handleCreatePosts();
+  // }, []);
 
   const handleCreatePosts = async () => {
     const response = await fetch("/api/create-posts", {
@@ -24,9 +25,9 @@ const CreatePostsButton = () => {
   return (
     <button
       onClick={handleCreatePosts}
-      className="bg-gray-500 h-10 px-2 py-3  items-center justify-center text-white hidden "
+      className="bg-gray-500 h-10 px-3 py-2  items-center justify-center text-white  rounded-lg text-start hover:bg-[#f2f9]"
     >
-      Create Posts
+      Update Data
     </button>
   );
 };

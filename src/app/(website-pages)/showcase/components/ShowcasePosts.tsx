@@ -1,3 +1,4 @@
+import CreatePostsButton from "@/app/components/CreatePostButton";
 import type { SanityDocument } from "@sanity/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,9 +14,12 @@ const ShowcasePosts = ({ posts = [] }: { posts: SanityDocument[] }) => {
 
   return (
     <div className="py-10 mx-auto grid grid-cols-1 text-white">
-      <p className="text-xl md:text-4xl font-bold mb-10 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
-        Latest showcase:
-      </p>
+      <div className="flex items-center justify-between">
+        <p className="text-xl md:text-4xl font-bold mb-10 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+          Latest showcase:
+        </p>
+        <CreatePostsButton />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {posts.map((post) => (
           <Link
