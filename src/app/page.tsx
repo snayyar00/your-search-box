@@ -22,6 +22,8 @@ const BlogCards = dynamic(() => import('./components/BlogCards'));
 const FYQ = dynamic(() => import('./components/FYQ'));
 const Testimonials = dynamic(() => import('./components/Testimonials'));
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export default async function Home() {
   return (
     <>

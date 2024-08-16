@@ -1,4 +1,3 @@
-
 import "server-only";
 
 import type { QueryParams } from "@sanity/client";
@@ -30,13 +29,13 @@ export async function sanityFetch<QueryResponse>({
   return client
     .withConfig({ useCdn: true })
     .fetch<QueryResponse>(query, params, {
-      cache: isDevelopment || isDraftMode ? undefined : "force-cache",
+      cache: isDevelopment || isDraftMode ? undefined : "no-store",
       ...(isDraftMode && {
         token: token,
         perspective: "previewDrafts",
       }),
       next: {
-        ...(isDraftMode && { revalidate: 30 }),
+        revalidate: 60, // Revalidate every 60 seconds
         tags,
       },
     });

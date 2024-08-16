@@ -25,7 +25,7 @@ const CreatePostsButton = () => {
   return (
     <button
       onClick={handleCreatePosts}
-      className="bg-gray-500 h-10 px-3 py-2  items-center justify-center text-white  rounded-lg text-start hover:bg-[#f2f9]"
+      className="bg-gray-500 h-10 px-3 py-2  items-center justify-center text-white  rounded-lg text-start hover:bg-[#f2f9] hidden"
     >
       Update Data
     </button>
