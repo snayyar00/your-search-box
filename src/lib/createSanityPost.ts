@@ -14,7 +14,6 @@ function generateSlug(baselink: string, id: string): string {
     .replace(/\./g, '-')
     .toLowerCase();
 
-  
   return `${slug}`;
 }
 
