@@ -14,8 +14,8 @@ function generateSlug(baselink: string, id: string): string {
     .replace(/\./g, '-')
     .toLowerCase();
 
-  // Append a portion of the unique ID to ensure uniqueness
-  return `${slug}-${id.slice(-6)}`;
+  
+  return `${slug}`;
 }
 
 export async function createSanityPosts() {
