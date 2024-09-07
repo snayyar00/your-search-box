@@ -20,6 +20,7 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Search Box" />
       <meta property="og:description" content="Smart Search Box" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     </>
   ),
   banner: {
@@ -33,12 +34,12 @@ export default {
   footer: {
     text: (
       <span>
-        MIT {new Date().getFullYear()} ©{' '}
+        MIT {new Date().getFullYear()} ©{" "}
         <a href="https://yoursearchbox.com" target="_blank">
           Your Search Box
         </a>
         .
       </span>
-    )
+    ),
   },
-}
+};
