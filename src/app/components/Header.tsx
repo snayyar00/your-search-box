@@ -167,7 +167,7 @@ const Header = () => {
 
               <div className="inline-flex items-center justify-between gap-3 md:gap-5 ">
                 <Link
-                  href={"/sign-up"}
+                  href={"https://app.yoursearchbox.com/login"}
                   className="hover:translate-x-1 hover:duration-300 "
                 >
                   <Button
@@ -178,7 +178,7 @@ const Header = () => {
                   </Button>
                 </Link>
                 <Link
-                  href="sign-in"
+                  href="https://app.yoursearchbox.com/login"
                   className="hover:translate-x-1 hover:duration-300"
                 >
                   <Button

@@ -64,15 +64,15 @@ const ContactUs = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Phone className="mr-4 text-blue-400" />
-                <span>+1 (123) 456-7890</span>
+                <span>+1 (778) 636-0039</span>
               </div>
               <div className="flex items-center">
                 <Mail className="mr-4 text-blue-400" />
-                <span>info@yourcompany.com</span>
+                <span>support@yoursearchbox.com</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="mr-4 text-blue-400" />
-                <span>123 Tech Street, Silicon Valley, CA 94000</span>
+                <span>Canada</span>
               </div>
             </div>
             <div className="mt-12">
