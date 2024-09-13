@@ -15,7 +15,6 @@ const builder = imageUrlBuilder(client);
 
 const ShowCasePost = ({ post }: { post: SanityDocument }) => {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   }, []);
