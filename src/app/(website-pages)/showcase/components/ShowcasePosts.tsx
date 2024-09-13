@@ -1,6 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
 import CreatePostsButton from "@/app/components/CreatePostButton";
 import type { SanityDocument } from "@sanity/client";
-import Image from "next/image";
 import Link from "next/link";
 
 const ShowcasePosts = ({ posts = [] }: { posts: SanityDocument[] }) => {
@@ -13,35 +15,38 @@ const ShowcasePosts = ({ posts = [] }: { posts: SanityDocument[] }) => {
   };
 
   return (
-    <div className="py-10 mx-auto grid grid-cols-1 text-white">
-      <div className="flex items-center justify-between">
-        <p className="text-xl md:text-4xl font-bold mb-10 bg-gradient-to-r from-white to-gray-400 text-transparent bg-clip-text">
+    <div className="py-10 mx-auto max-w-6xl">
+      <div className="flex items-center justify-between mb-10">
+        <p className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500">
           Latest showcase:
         </p>
         <CreatePostsButton />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
-          <Link
-            className="p-4 flex flex-col items-center justify-between hover:opacity-90 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:scale-105 border border-gray-500"
-            key={post._id}
-            href={`/showcase/${post.slug.current}`}
-          >
-            <div className="inline-flex p-2">
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-white to-blue-300 text-transparent bg-clip-text">
+          <Link key={post._id} href={`/showcase/${post.slug.current}`} passHref>
+            <motion.div
+              className="flex flex-col items-center justify-between p-4 bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 border border-gray-700"
+              style={{ height: "150px" }} // Set a fixed height for uniformity
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-full flex-grow">
+                {" "}
+                {/* Ensure content stretches */}
+                <h2 className="text-xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-300">
                   {post.baselink}
                 </h2>
-                <p className="py-2 text-gray-400 text-xs font-light uppercase">
-                  <span className="text-gray-300 pr-2">UpdatedAt:</span>
+                <p className="text-gray-400 text-xs font-light uppercase mb-1">
+                  <span className="text-gray-300 pr-2">Updated At:</span>
                   {convertDate(post._updatedAt)}
                 </p>
-                <p className="py-2 text-gray-400 text-xs font-light uppercase">
+                <p className="text-gray-400 text-xs font-light uppercase">
                   <span className="text-gray-300 pr-2">Created Date:</span>
                   {convertDate(post.date)}
                 </p>
               </div>
-            </div>
+            </motion.div>
           </Link>
         ))}
       </div>
