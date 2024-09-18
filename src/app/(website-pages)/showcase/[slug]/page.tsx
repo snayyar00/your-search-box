@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   });
   return {
     title: `Your Search Box ${post?.baselink}`,
-    description: post?.questions[0] || "",
+    description: post?.questions || "",
     openGraph: {
       locale: "en_US",
       type: "article",
       title: `Your Search Box ${post?.baselink}`,
-      description: post?.questions[0] || "",
+      description: post?.questions || "",
       siteName: "Your Search Box",
 
       images: [
