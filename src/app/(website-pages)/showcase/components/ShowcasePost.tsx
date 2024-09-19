@@ -25,8 +25,8 @@ const ShowCasePost = ({ post }: { post: SanityDocument }) => {
         <h1 className="text-4xl font-extrabold mb-4 text-gray-300">
           Post Not Found
         </h1>
-        <Link href="/blog" className="text-blue-500 hover:underline">
-          Return to Blog List
+        <Link href="/showcase" className="text-blue-500 hover:underline">
+          Return to Showcase List
         </Link>
       </div>
     );
@@ -36,7 +36,7 @@ const ShowCasePost = ({ post }: { post: SanityDocument }) => {
     <main className="py-12 md:py-24 text-gray-900 relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 -z-10">
-        <BackgroundGridImage className="w-full h-full object-cover opacity-40" />
+        <BackgroundGridImage className="w-full h-full object-cover opacity-30" />
       </div>
 
       <div className="container mx-auto px-4">
@@ -44,9 +44,9 @@ const ShowCasePost = ({ post }: { post: SanityDocument }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative z-10"
+          className="relative z-10 bg-gradient-to-br from-teal-100 via-blue-50 to-white shadow-lg rounded-lg p-8 md:p-12"
         >
-          <h1 className="text-4xl font-extrabold mb-6 text-center bg-gradient-to-b from-blue-700 to-blue-500 bg-clip-text text-transparent max-w-3xl mx-auto">
+          <h1 className="text-5xl font-extrabold mb-6 text-center bg-gradient-to-br from-blue-700 to-teal-500 bg-clip-text text-transparent max-w-3xl mx-auto">
             {post.baselink}
           </h1>
 
@@ -68,64 +68,40 @@ const ShowCasePost = ({ post }: { post: SanityDocument }) => {
                   remarkPlugins={[remarkGfm]}
                   components={{
                     h1: ({ node, ...props }) => (
-                      <h1 style={{ color: "#7f8c8d" }} {...props} /> // Soft grayish-blue for <h1>
+                      <h1 className="text-3xl font-bold text-gray-800 mb-4" {...props} />
                     ),
                     h2: ({ node, ...props }) => (
-                      <h2 style={{ color: "#95a5a6" }} {...props} /> // Light gray for <h2>
+                      <h2 className="text-2xl font-semibold text-gray-700 mb-3" {...props} />
                     ),
                     h3: ({ node, ...props }) => (
-                      <h3 style={{ color: "#2ecc71" }} {...props} /> // Soft green for <h3>
+                      <h3 className="text-xl font-medium text-teal-600 mb-2" {...props} />
                     ),
                     p: ({ node, ...props }) => (
-                      <p style={{ color: "#7f8c8d" }} {...props} /> // Soft grayish-blue for <p>
+                      <p className="text-gray-600 mb-4" {...props} />
                     ),
                     a: ({ node, ...props }) => (
-                      <a style={{ color: "#3498db" }} {...props} /> // Sky blue for <a>
+                      <a className="text-blue-600 hover:underline" {...props} />
                     ),
                     strong: ({ node, ...props }) => (
-                      <strong style={{ color: "#e74c3c" }} {...props} /> // Light red for <strong>
+                      <strong className="text-red-500" {...props} />
                     ),
                     em: ({ node, ...props }) => (
-                      <em style={{ color: "#f39c12" }} {...props} /> // Light orange for <em>
+                      <em className="text-orange-400" {...props} />
                     ),
                     ul: ({ node, ...props }) => (
-                      <ul
-                        style={{ color: "#7f8c8d", marginLeft: "1.5rem" }}
-                        {...props}
-                      /> // Soft grayish-blue for <ul>
+                      <ul className="list-disc list-inside text-gray-600 mb-4" {...props} />
                     ),
                     li: ({ node, ...props }) => (
-                      <li
-                        style={{ color: "#7f8c8d", marginBottom: "0.5rem" }}
-                        {...props}
-                      /> // Soft grayish-blue for <li>
+                      <li className="text-gray-600 mb-2" {...props} />
                     ),
                     blockquote: ({ node, ...props }) => (
-                      <blockquote
-                        style={{
-                          borderLeft: "4px solid #3498db",
-                          paddingLeft: "1rem",
-                          color: "#7f8c8d",
-                        }}
-                        {...props}
-                      /> // Sky blue border for blockquotes
+                      <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4" {...props} />
                     ),
                     code: ({ node, ...props }) => (
-                      <code
-                        style={{
-                          backgroundColor: "#ecf0f1",
-                          color: "#2c3e50",
-                          padding: "0.2rem 0.4rem",
-                          borderRadius: "4px",
-                        }}
-                        {...props}
-                      /> // Light background for code
+                      <code className="bg-gray-200 text-gray-800 p-1 rounded" {...props} />
                     ),
                     img: ({ node, ...props }) => (
-                      <img
-                        style={{ borderRadius: "8px", maxWidth: "100%" }}
-                        {...props}
-                      /> // Rounded corners for images
+                      <img className="rounded-lg shadow-md mb-4" {...props} />
                     ),
                   }}
                 >
@@ -138,7 +114,7 @@ const ShowCasePost = ({ post }: { post: SanityDocument }) => {
           <div className="flex justify-center mt-10">
             <Link
               href="/showcase"
-              className="flex items-center justify-center px-6 py-3 bg-teal-500 text-white rounded-md hover:bg-teal-600 transition-colors duration-300 text-center"
+              className="flex items-center justify-center px-6 py-3 bg-teal-500 text-white rounded-lg shadow-md hover:bg-teal-600 transition-colors duration-300 text-center"
             >
               Back to Showcase List
             </Link>

@@ -40,7 +40,7 @@ export default async function Home() {
         {/* <BlogCards /> */}
       </TracingBeam>
       <CallToAction />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

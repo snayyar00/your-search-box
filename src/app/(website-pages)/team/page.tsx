@@ -1,6 +1,62 @@
-"use client";
+// "use client";
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Meet Our Team of Experts | My Website",
+  description:
+    "Discover the talented professionals behind our success. Meet the team of experts dedicated to driving innovation and delivering exceptional results.",
+  openGraph: {
+    title: "Meet Our Team of Experts | My Website",
+    description:
+      "Explore the biographies of our passionate and experienced team members. Learn about their roles and contributions to our company's success.",
+    url: "https://your-website.com/team",
+    images: [
+      {
+        url: "https://your-website.com/og-image-team.png",
+        width: 1200,
+        height: 627,
+        alt: "Meet Our Team of Experts",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+    siteName: "My Website",
+  },
+  metadataBase: {
+    host: "https://your-search-box.vercel.app",
+    href: "/",
+    origin: "https://your-search-box.vercel.app",
+    password: "your-search-box",
+    hash: "your-search-box",
+    pathname: "/",
+    search: "",
+    username: "your-search-box",
+    hostname: "your-search-box.vercel.app",
+    port: "",
+    protocol: "https:",
+    searchParams: new URLSearchParams(""),
+    toString: () => "https://your-search-box.vercel.app/",
+    toJSON: () => "https://your-search-box.vercel.app/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourwebsite", // Add your website's Twitter handle
+    creator: "@yourwebsite", // Add creator's Twitter handle
+    title: "Meet Our Team of Experts | My Website",
+    description:
+      "Get to know the team that powers our success. Meet the experts dedicated to innovation and excellence.",
+    images: [
+      {
+        url: "https://your-website.com/og-image-team.png",
+        width: 1200,
+        height: 627,
+        alt: "Meet Our Team of Experts",
+      },
+    ],
+  },
+};
 
 const teamData = [
   {

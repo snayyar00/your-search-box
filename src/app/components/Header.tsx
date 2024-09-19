@@ -42,7 +42,7 @@ const navData = [
   {
     id: 5,
     name: "Blogs",
-    href: "#blogs",
+    href: "/blog",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const subTriggerData = [
 
 const Header = () => {
   return (
-    <header className="sticky top-0 backdrop-blur-md z-20">
+    <header className="sticky top-0 backdrop-blur-md bg-[#14093E] z-20">
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
