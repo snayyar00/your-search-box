@@ -42,7 +42,7 @@ const navData = [
   {
     id: 5,
     name: "Blogs",
-    href: "#blogs",
+    href: "/blog",
   },
   {
     id: 6,
