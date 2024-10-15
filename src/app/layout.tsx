@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { cn } from "@/lib/utils";
 import RectangularLogo from "@/assets/rectangular-logo.png";
 import Header from "./components/Header";
+import Script from 'next/script';
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -65,6 +66,17 @@ export default function RootLayout({
       <body className={cn(lato.className, "antialiased bg-[#14093E]")}>
         <Header />
         {children}
+        <Script
+          id="yoursearchbox-script"
+          strategy="afterInteractive"
+        >
+          {`
+            const script = document.createElement('script');
+            script.src = "https://ysb-widget.b-cdn.net/searchbox-widget.umd.js?botId=670e398267ad7a6f897e017c&variant=button";
+            script.async = true;
+            document.body.appendChild(script);
+          `}
+        </Script>
       </body>
     </html>
   );
