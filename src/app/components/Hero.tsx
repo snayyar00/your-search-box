@@ -1,7 +1,7 @@
 "use client";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { cn } from "@/lib/utils";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { Spotlight } from "@/components/ui/spotlight";
 import SparklesText from "@/components/magicui/sparkles-text";
@@ -13,18 +13,31 @@ const placeholders = [
   "Need assistance?",
 ];
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  console.log(e.target.value);
-};
-const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  console.log("submitted");
-};
-
 const Hero = () => {
+  const searchWidgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://ysb-widget.b-cdn.net/searchbox-widget.umd.js?botId=670e398267ad7a6f897e017c&variant=search";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleSearch = (query: string) => {
+    const searchElement = document.getElementById('search-ss');
+    if (searchElement) {
+      const searchEvent = new CustomEvent('search', { detail: { query } });
+      searchElement.dispatchEvent(searchEvent);
+    }
+  };
+
   return (
     <>
-      <section className="py-16  text-white text-center md:py-24  relative overflow-x-clip">
+      <section className="py-16 text-white text-center md:py-24 relative overflow-x-clip">
         <div className="absolute h-[70rem] w-[73rem] -translate-x-1/2 left-1/2 -top-[1rem] -z-10 opacity-90"></div>
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20 hidden sm:block"
@@ -68,16 +81,13 @@ const Hero = () => {
               information from your website content all with a Simple Click
             </p>
           </div>
-          <div className="mt-16">
-            <PlaceholdersAndVanishInput
-              placeholders={placeholders}
-              onChange={handleChange}
-              onSubmit={onSubmit}
-              className="rounded-3xl"
-              aria-label="Search input"
-            />
-          </div>
-        </div>
+         
+            <div 
+              id="search-ss" 
+              className="w-full max-w-md mx-auto mt-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-full p-1 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              </div>
+         </div>
       </section>
     </>
   );
