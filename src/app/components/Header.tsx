@@ -42,7 +42,7 @@ const navData = [
   {
     id: 5,
     name: "Blogs",
-    href: "#blogs",
+    href: "/blog",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const subTriggerData = [
 
 const Header = () => {
   return (
-    <header className="sticky top-0 backdrop-blur-sm z-20">
+    <header className="sticky top-0 backdrop-blur-md bg-[#14093E] z-20">
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
@@ -120,7 +120,7 @@ const Header = () => {
                   {navData.map(({ href, id, name }) =>
                     name === "Product" ? (
                       <MenubarMenu key={id}>
-                        <MenubarTrigger className=" hover:bg-[#14093E] data-[state=open]:bg-[#14093E] focus:bg-[#14093E] space-x-1 flex items-baseline gap-1 data-[state=open]:text-white/90 focus:text-white/90 hover:text-blue-700 ">
+                        <MenubarTrigger className=" hover:bg-[#2c1c6e] data-[state=open]:bg-[#14093E] focus:bg-[#14093E] space-x-1 flex items-baseline gap-1 data-[state=open]:text-white/90 focus:text-white/90 hover:text-white ">
                           <span className="text-base">Product</span>
                           <span className="h-4">
                             <ChevronDown />
@@ -155,7 +155,7 @@ const Header = () => {
                       <Link
                         key={id}
                         href={href}
-                        className="hover:border-b"
+                        className="hover:border-b "
                         role="menuitem"
                       >
                         {name}

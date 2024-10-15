@@ -2,87 +2,123 @@
 
 import React, { useState, useEffect } from "react";
 import { SanityDocument } from "@sanity/client";
-import { PortableText } from "@portabletext/react";
 import { client } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import BackgroundGridImage from "@/assets/why-choose-us-grid.svg";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 const builder = imageUrlBuilder(client);
 
 const ShowCasePost = ({ post }: { post: SanityDocument }) => {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500); // Simulate loading
   }, []);
 
   if (!post) {
     return (
-      <div className="container mx-auto px-4 py-12 text-center text-white z-50">
-        <h1 className="text-4xl font-bold mb-4">Blog post not found</h1>
-        <Link href="/blog" className="text-blue-400 hover:underline">
-          Return to blog list
+      <div className="container mx-auto px-4 py-12 text-center text-gray-200 z-50">
+        <h1 className="text-4xl font-extrabold mb-4 text-gray-300">
+          Post Not Found
+        </h1>
+        <Link href="/showcase" className="text-blue-500 hover:underline">
+          Return to Showcase List
         </Link>
       </div>
     );
   }
 
   return (
-    <main className="py-12 md:py-24 text-white relative overflow-clip">
-      <div className="container mx-auto px-4  prose prose-xl text-gray-200 prose-">
-        {/* Background grid */}
-        {/* <div className="w-full absolute left-0 -top-[25rem] max-h-11 opacity-60 z-0">
-          <BackgroundGridImage className="w-full h-full z-0" />
-        </div> */}
+    <main className="py-12 md:py-24 text-gray-900 relative overflow-hidden">
+      {/* Background grid */}
+      <div className="absolute inset-0 -z-10">
+        <BackgroundGridImage className="w-full h-full object-cover opacity-30" />
+      </div>
 
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="z-50"
+          className="relative z-10 bg-gradient-to-br from-teal-100 via-blue-50 to-white shadow-lg rounded-lg p-8 md:p-12"
         >
-          <h1 className="section-header bg-gradient-to-b from-white to-[#586285] text-transparent bg-clip-text text-4xl font-bold mb-8 text-center max-w-2xl  mx-auto z-10 ">
+          <h1 className="text-5xl font-extrabold mb-6 text-center bg-gradient-to-br from-blue-700 to-teal-500 bg-clip-text text-transparent max-w-3xl mx-auto">
             {post.baselink}
           </h1>
-          <div className="flex flex-col items-center justify-center  gap-10">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full h-96  flex items-center justify-center "
-            >
-              {/* {post?.mainImage ? (
-                <Image
-                  src={builder.image(post.mainImage).url()}
-                  alt={post?.mainImage?.alt}
-                  width={300}
-                  height={300}
-                  // layout="fill"
-                  //   objectFit="cover"
-                  className="rounded-lg "
-                />
-              ) : null} */}
-            </motion.div>
-            {post?._createdAt ? (
+
+          <div className="flex flex-col items-center gap-12">
+            {post?.questions && post.questions[0] ? (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg text-[#C6C1B9] mb-8 leading-relaxed max-w-5xl"
+                className="prose prose-lg leading-relaxed max-w-4xl mx-auto"
+                style={{
+                  fontSize: "1.125rem",
+                  lineHeight: "1.7",
+                  maxWidth: "70rem",
+                }}
               >
-                <PortableText value={post.questions} />
+                <ReactMarkdown
+                  rehypePlugins={[rehypeRaw]}
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    h1: ({ node, ...props }) => (
+                      <h1 className="text-3xl font-bold text-gray-800 mb-4" {...props} />
+                    ),
+                    h2: ({ node, ...props }) => (
+                      <h2 className="text-2xl font-semibold text-gray-700 mb-3" {...props} />
+                    ),
+                    h3: ({ node, ...props }) => (
+                      <h3 className="text-xl font-medium text-teal-600 mb-2" {...props} />
+                    ),
+                    p: ({ node, ...props }) => (
+                      <p className="text-gray-600 mb-4" {...props} />
+                    ),
+                    a: ({ node, ...props }) => (
+                      <a className="text-blue-600 hover:underline" {...props} />
+                    ),
+                    strong: ({ node, ...props }) => (
+                      <strong className="text-red-500" {...props} />
+                    ),
+                    em: ({ node, ...props }) => (
+                      <em className="text-orange-400" {...props} />
+                    ),
+                    ul: ({ node, ...props }) => (
+                      <ul className="list-disc list-inside text-gray-600 mb-4" {...props} />
+                    ),
+                    li: ({ node, ...props }) => (
+                      <li className="text-gray-600 mb-2" {...props} />
+                    ),
+                    blockquote: ({ node, ...props }) => (
+                      <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 mb-4" {...props} />
+                    ),
+                    code: ({ node, ...props }) => (
+                      <code className="bg-gray-200 text-gray-800 p-1 rounded" {...props} />
+                    ),
+                    img: ({ node, ...props }) => (
+                      <img className="rounded-lg shadow-md mb-4" {...props} />
+                    ),
+                  }}
+                >
+                  {post.questions[0]}
+                </ReactMarkdown>
               </motion.div>
             ) : null}
           </div>
-          <Link
-            href="/showcase"
-            className="inline-block px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300 my-10 z-50"
-          >
-            Back to showcase List
-          </Link>
+
+          <div className="flex justify-center mt-10">
+            <Link
+              href="/showcase"
+              className="flex items-center justify-center px-6 py-3 bg-teal-500 text-white rounded-lg shadow-md hover:bg-teal-600 transition-colors duration-300 text-center"
+            >
+              Back to Showcase List
+            </Link>
+          </div>
         </motion.div>
       </div>
     </main>

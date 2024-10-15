@@ -1,4 +1,66 @@
+import { Metadata } from "next";
 import React from "react";
+export const metadata: Metadata = {
+  title: "Privacy Policy | Your Search Box",
+  description:
+    "Learn how Your Search Box collects, uses, and protects your personal information. We prioritize your privacy and handle data responsibly.",
+  openGraph: {
+    title: "Privacy Policy | Your Search Box",
+    description:
+      "Discover how Your Search Box handles your personal information, including data collection, usage, and sharing practices. We are committed to safeguarding your privacy.",
+    url: "https://your-search-box.vercel.app/privacy-policy",
+    images: [
+      {
+        url: "https://your-search-box.vercel.app/og-image-privacy.png",
+        width: 1200,
+        height: 627,
+        alt: "Privacy Policy",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+    siteName: "Your Search Box",
+  },
+  metadataBase: {
+    host: "https://your-search-box.vercel.app",
+    href: "/",
+    origin: "https://your-search-box.vercel.app",
+    password: "your-search-box",
+    hash: "your-search-box",
+    pathname: "/",
+    search: "",
+    username: "your-search-box",
+    hostname: "your-search-box.vercel.app",
+    port: "",
+    protocol: "https:",
+    searchParams: new URLSearchParams(""),
+    toString: () => "https://your-search-box.vercel.app/",
+    toJSON: () => "https://your-search-box.vercel.app/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourwebsite", // Your website's Twitter handle
+    creator: "@yourwebsite", // Creator's Twitter handle
+    title: "Privacy Policy | Your Search Box",
+    description:
+      "Learn how Your Search Box handles your personal information, ensuring privacy and protection through our responsible data practices.",
+    images: [
+      {
+        url: "https://your-search-box.vercel.app/og-image-privacy.png",
+        width: 1200,
+        height: 627,
+        alt: "Privacy Policy",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://your-search-box.vercel.app/privacy-policy",
+  },
+};
 
 const PrivacyPolicy = () => {
   return (
@@ -8,10 +70,10 @@ const PrivacyPolicy = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
         <p className="mb-4">
-          Welcome to Your Search Box. We are
-          committed to protecting your personal information and your right to
-          privacy. This Privacy Policy explains how we collect, use, and share
-          your information when you use our services.
+          Welcome to Your Search Box. We are committed to protecting your
+          personal information and your right to privacy. This Privacy Policy
+          explains how we collect, use, and share your information when you use
+          our services.
         </p>
       </section>
 

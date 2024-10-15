@@ -17,33 +17,30 @@ const logoData = [
     src: acme,
   },
   {
-    id: 1,
+    id: 2,
     src: apex,
   },
   {
-    id: 1,
+    id: 3,
     src: celestial,
   },
   {
-    id: 1,
+    id: 4,
     src: echo,
   },
   {
-    id: 1,
+    id: 5,
     src: pulse,
   },
   {
-    id: 1,
+    id: 6,
     src: quantum,
   },
 ];
 
 const LogoTicker = () => {
   return (
-    <div
-      className="py-8 md:py-12 mt-10 text-white"
-      id="partners"
-    >
+    <div className="py-8 md:py-12 mt-10 text-white" id="partners">
       <div className="container">
         <h2 className="text-xl text-center">
           Trusted by the world&apos;s most innovative teams
@@ -51,8 +48,7 @@ const LogoTicker = () => {
         <div
           className="flex overflow-hidden mt-12 lg:mt-20
         [mask-image:linear-gradient(to_right,transparent,black,transparent)]
-        [-webkit-mask-image:linear-gradient(to_right,transparent,black,transparent)]
-        "
+        [-webkit-mask-image:linear-gradient(to_right,transparent,black,transparent)]"
         >
           <motion.div
             className="flex gap-14 mx-auto flex-none pr-14"
@@ -79,7 +75,7 @@ const LogoTicker = () => {
             ))}
             {logoData.map(({ id, src }) => (
               <Image
-                key={id}
+                key={id + logoData.length} // Ensures unique key for the repeated logos
                 src={src}
                 width={100}
                 height={50}
